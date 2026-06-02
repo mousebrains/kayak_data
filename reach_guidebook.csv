@@ -129,7 +129,7 @@ reach_id,guidebook_id,page,run,url
 41,4,172,95,
 42,2,121,78,
 42,3,154,85,
-42,4,164,90 and 91,
+42,4,164,90,
 42,7,213,49.2,
 42,9,55,,
 42,11,,,https://www.dreamflows.com/xlist-or.php#Site143
@@ -1108,3 +1108,9 @@ reach_id,guidebook_id,page,run,url
 417,6,314,294,
 418,6,55,30,
 419,6,55,31,
+421,2,121,78,
+421,3,154,85,
+421,4,165,91,
+421,7,213,49.2,
+421,9,55,,
+421,11,,,https://www.dreamflows.com/xlist-or.php#Site143

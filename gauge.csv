@@ -175,7 +175,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 174,Fall_Creek_Inflow,,,Fall Creek above Winberry (FALO3 inflow - 14150800 Winberry),43.972015,-122.65907,,,,,,,,,837.6,,170900010904,0,Fall Creek,Fall Creek at Fall Creek above Winberry (FALO3 inflow - 14150800 Winberry),fall creek|9|009162|999999,OR
 175,WLAO3,,,Willamina,45.047222,-123.502778,WLAO3,,,WLAO3,WLAO3,,,,242.1,,170900080404,0,South Yamhill,South Yamhill at Willamina,yamhill|0south|009758|999999,OR
 176,SF_McKenzie_near_Rainbow,,,Rainbow,44.136,-122.2484,14159500,,,,,,14159500,,1236.0,208.0,170900040308,0,South Fork Mckenzie,South Fork Mckenzie at Rainbow,mckenzie|0south|008764|000208,OR
-177,McKenzie_Rainbow,,,South Fork,44.1664,-122.2558,CMRO3,CMRO3,,,CMRO3,,,,1160.0,,170900040502,0,McKenzie,McKenzie at South Fork,mckenzie|9|008840|999999,OR
+177,McKenzie_Rainbow,,,nr Rainbow,44.1664,-122.2558,CMRO3,CMRO3,,,CMRO3,,,,1160.0,,170900040502,0,McKenzie,McKenzie nr Rainbow,mckenzie|9|008840|999999,OR
 178,SALMON RIVER AB EAST FORK NR CLAYTON ID,,,East Fork nr Clayton,44.266642,-114.326758,,SAEI,,,SAEI1,,13297380,,5326.2,1200.0,170602010906,0,Salmon,Salmon at East Fork nr Clayton,salmon|9|004674|001200,ID
 179,SALMON RIVER NR SHOUP ID,,,Shoup,45.3225,-114.44,,,,,,,13307000,,3157.6,6239.0,170602031302,0,Salmon,Salmon at Shoup,salmon|9|006842|006239,ID
 180,EFSF_Stibnite,,,Stibnite,44.905722,-115.3295,,SFSI,,,SFSI1,,13311000,,6466.0,19.3,170602080201,0,East Fork South Fork Salmon,East Fork South Fork Salmon at Stibnite,salmon|0east|003534|000019,ID
