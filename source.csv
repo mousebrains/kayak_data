@@ -318,3 +318,5 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 345,VAPW1,NWS,131,,
 346,SHNO3,NWS,132,,
 347,Smith_Gardiner_calc,Calculation,,17,
+348,SF_Salmon_MackayBar_calc,Calculation,,18,
+349,Secesh_Burgdorf_calc,Calculation,,19,
