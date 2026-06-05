@@ -179,7 +179,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 178,SALMON RIVER AB EAST FORK NR CLAYTON ID,,,East Fork nr Clayton,44.266642,-114.326758,,SAEI,,,SAEI1,,13297380,,5326.2,1200.0,170602010906,0,Salmon,Salmon at East Fork nr Clayton,salmon|9|004674|001200,ID
 179,SALMON RIVER NR SHOUP ID,,,Shoup,45.3225,-114.44,,,,,,,13307000,,3157.6,6239.0,170602031302,0,Salmon,Salmon at Shoup,salmon|9|006842|006239,ID
 180,EFSF_Stibnite,,,Stibnite,44.905722,-115.3295,,SFSI,,,SFSI1,,13311000,,6466.0,19.3,170602080201,0,East Fork South Fork Salmon,East Fork South Fork Salmon at Stibnite,salmon|0east|003534|000019,ID
-181,EFSF_Salmon_calc,,,EFSF just below Johnson Cr confluence (Johnson + Stibnite),44.962554,-115.505507,,,,,,,,,4632.4,,170602080302,0,Salmon,Salmon at EFSF just below Johnson Cr confluence (Johnson + Stibnite),salmon|9|005368|999999,ID
+181,EFSF_Salmon_calc,,,EFSF just below Johnson Cr confluence (calc),44.962554,-115.505507,,,,,,,,,4632.4,,170602080302,0,Salmon,Salmon at EFSF just below Johnson Cr confluence (calc),salmon|9|005368|999999,ID
 182,LWWW1,,,Willard Nat'l Fish Hatchery near Mill A,45.7648,-121.6303,,LWWW,,,LWWW1,,,,925.0,,170701050905,0,Little White Salmon,Little White Salmon at Willard Nat'l Fish Hatchery near Mill A,little white salmon|9|009075|999999,WA
 183,14128500,,,Carson,45.7267469824777,-121.794774605898,,WCNW,,,WCNW1,,14128500,,112.6,225.0,170701051008,0,Wind,Wind at Carson,wind|9|009887|000225,WA
 184,28B080,,,Washougal,45.5835856510001,-122.34569456,,WASW,,,WASW1,,,,51.9,,170800010606,0,Washougal,Washougal at Washougal,washougal|9|009948|999999,WA
@@ -221,3 +221,5 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 222,VAPW1,,,Vancouver,45.631,-122.696,,,,,VAPW1,,,,,,17080003,0,Columbia,Columbia at Vancouver,columbia|9|000894|000000,"OR,WA"
 223,SHNO3,,,St. Helens,45.864,-122.796,,,,,SHNO3,,,,,,17080003,0,Columbia,Columbia at St. Helens,columbia|9|000914|000000,"OR,WA"
 224,Smith_Gardiner_calc,,,Near Gardiner (estimated),43.784562,-123.815104,,,,,,,,,50.0,206.0,171003030704,0,Smith,Smith near Gardiner (calc),smith|9|009950|000206,OR
+225,SF_Salmon_MackayBar_calc,,,At mouth nr Mackay Bar (estimated),45.366575,-115.512901,,,,,,,,,1980.0,1309.0,170602080608,0,South Fork Salmon,SF Salmon at Mackay Bar (calc),salmon|0south|008020|001309,ID
+226,Secesh_Burgdorf_calc,,,Near Burgdorf (estimated),45.225833,-115.813333,,,,,,,,,5690.0,104.0,170602080503,0,Secesh,Secesh nr Burgdorf (calc),secesh|9|004310|000104,ID
