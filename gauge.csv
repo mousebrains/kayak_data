@@ -229,4 +229,4 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 230,SF_Toutle_calc,,,At Toutle (estimated),46.322055,-122.697055,,,,,,,,,400.0,120.0,170800050605,0,South Fork Toutle,SF Toutle at Toutle (calc),toutle|0south|009600|000120,WA
 231,Kalama_ItalianCreek_calc,,,Below Italian Cr nr Kalama (estimated),46.044836,-122.815384,,,,,,,,,20.0,198.0,170800030305,0,Kalama,Kalama below Italian Cr (calc),kalama|9|009980|000198,WA
 232,Coweeman_Kelso_calc,,,Near Kelso (estimated),46.128169,-122.838443,,,,,,,,,30.0,119.0,170800050804,0,Coweeman,Coweeman nr Kelso (calc),coweeman|9|009970|000119,WA
-233,Green_Toutle_calc,,,Above Beaver Cr nr Kid Valley (estimated),46.381775,-122.52372,,,,,,,,,,129.0,170800050404,0,Green (Toutle),Green (Toutle) above Beaver Cr (calc),green (toutle)|9|999999|000129,WA
+233,Green_Toutle_calc,,,Above Beaver Cr nr Kid Valley (estimated),46.381775,-122.52372,,,,,,,,,845.8,129.0,170800050404,0,Green (Toutle),Green (Toutle) above Beaver Cr (calc),green (toutle)|9|009154|000129,WA
