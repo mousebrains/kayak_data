@@ -430,3 +430,14 @@ id,reach_id,name,low,low_data_type,high,high_data_type
 429,419,IV+,250.0,flow,1500.0,flow
 430,420,III+(V),,flow,,flow
 431,421,II,600.0,flow,3500.0,flow
+432,422,III-IV,,flow,,flow
+433,423,II-IV,,flow,,flow
+434,424,III-IV,,flow,,flow
+435,425,II-III(IV),,flow,,flow
+436,426,III+(IV),1500.0,flow,4000.0,flow
+437,427,II+,,flow,,flow
+438,428,II-III,700.0,flow,3000.0,flow
+439,429,III-IV,,flow,,flow
+440,430,II-III,800.0,flow,2000.0,flow
+441,431,III-IV,400.0,flow,5000.0,flow
+442,432,IV,,flow,,flow
