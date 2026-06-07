@@ -1,0 +1,11 @@
+# Dataset contract manifest — see kayak.dataset.contract in the kayak engine.
+contract_version: 1
+dataset_id: wkcc
+name: WKCC River Levels
+status: publishable
+license: CC-BY-NC-4.0
+# Full 40-hex commit of the approved engine this dataset is validated against.
+# S7 formalizes per-release pinning; this is the current engine `main` baseline
+# and should be bumped to the contract-bearing commit once the engine's S6.2
+# (DATASET contract) lands on main.
+engine_test_ref: "606241d8191b5d1b4787eeb694887d84e37f6f34"
