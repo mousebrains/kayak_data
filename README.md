@@ -32,13 +32,24 @@ Schema (table shape) lives in the **code** repo (`data/db/migrations/`), not her
 
 ## How it's consumed
 
-The code reads this directory via the `METADATA_DIR` env var (the local clone
-path). `scripts/deploy.sh` pulls this repo, then `levels sync-metadata` applies the
-CSV diff and `import_metadata.py --geom-only/--gradient-only` applies the JSONs.
+The code reads this directory via the `DATASET_DIR` env var (the local clone
+path; the former `METADATA_DIR` is a deprecated alias). `scripts/deploy.sh` pulls
+this repo, then `levels sync-metadata` applies the CSV diff and
+`import_metadata.py --geom-only/--gradient-only` applies the JSONs.
 
 ## CI
 
-`validate.py` (run by `.github/workflows/validate.yml`) checks every CSV parses and
-the `id_counters.csv` invariants hold (ids unique per table; every id `< next_id`)
-— the same guarantee as the code repo's `tests/test_id_counters.py`, with no
-dependency on the kayak package.
+`.github/workflows/validate.yml` checks out the **kayak engine pinned by
+`dataset.yaml`'s `engine_test_ref`** — read from the PR's **base** commit, so a PR
+can't weaken its own validator by editing the pin — and runs the engine's
+authoritative `levels validate-dataset`. That enforces the full dataset contract:
+id-counter invariants (ids unique per table, every id `< next_id`, plus retired-id
+reuse / high-water vs `retired_ids.yaml`), foreign keys, geometry/gradient shape,
+and complete-projection file presence. It then runs an `init-db → sync-metadata →
+no-op sync-metadata → build` smoke against a throwaway DB. (This replaced the old
+stdlib `validate.py`, which only checked CSV parsing + id-counters.)
+
+The check runs on every PR and push for visibility, but is **not yet a required
+gate** — branch protection here waits until the nightly snapshot's direct push to
+`main` is removed (engine plan slice SA); enforcement until then is PR-CI
+visibility plus the deploy-time `validate-dataset` in `scripts/deploy.sh`.
