@@ -5,7 +5,6 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning; this is the current engine `main` baseline
-# and should be bumped to the contract-bearing commit once the engine's S6.2
-# (DATASET contract) lands on main.
-engine_test_ref: "606241d8191b5d1b4787eeb694887d84e37f6f34"
+# S7 formalizes per-release pinning; this is the contract-bearing engine `main`
+# commit (S6.2 / engine #130) that introduced the dataset.yaml contract.
+engine_test_ref: "33c539a33e4597fdb495497b9822c42a6315a604"
