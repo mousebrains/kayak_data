@@ -1,5 +1,19 @@
 name: validate
 
+# S4b-2: validate the dataset against the ENGINE pinned by dataset.yaml's
+# engine_test_ref (the authoritative `levels validate-dataset`), replacing the old
+# stdlib validate.py. The pin is read from the BASE commit, never the PR working
+# tree, so a PR can't weaken its own validator by editing engine_test_ref. Both
+# repos are private; the engine is fetched with a read-only deploy key
+# (KAYAK_ENGINE_DEPLOY_KEY — see kayak_python deploy/SETUP.md §2.6). Uses
+# `pull_request` (never pull_request_target): a fork PR simply lacks the secret
+# and fails the engine checkout — no secret exposure.
+#
+# Not yet a *required* gate: branch protection on this repo's main is deferred to
+# SA, because the nightly snapshot (scripts/snapshot_metadata.sh) still pushes
+# directly to main and protection would reject that push. Until then this runs on
+# every PR + push for visibility; SA removes the snapshot and makes it required.
+
 on:
   push:
     branches: [main]
@@ -9,8 +23,54 @@ jobs:
   validate:
     runs-on: ubuntu-24.04
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout dataset
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0 # the PR base commit must be present for the trusted-pin read
+
+      - name: Resolve trusted engine pin (from the BASE commit, not the PR tree)
+        id: pin
+        run: |
+          BASE_SHA="${{ github.event.pull_request.base.sha || github.sha }}"
+          REF=$(git show "$BASE_SHA:dataset.yaml" \
+            | sed -nE 's/^engine_test_ref:[[:space:]]*"?([0-9a-f]{40})"?.*/\1/p')
+          if [ -z "$REF" ]; then
+            echo "::error::could not read a 40-hex engine_test_ref from $BASE_SHA:dataset.yaml"
+            exit 1
+          fi
+          echo "ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "Validating against engine $REF (trusted base pin)"
+
+      - name: Checkout engine at the pinned commit (read-only deploy key)
+        uses: actions/checkout@v6
+        with:
+          repository: mousebrains/kayak_python
+          ref: ${{ steps.pin.outputs.ref }}
+          ssh-key: ${{ secrets.KAYAK_ENGINE_DEPLOY_KEY }}
+          path: engine
+
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          enable-cache: true
       - uses: actions/setup-python@v6
         with:
           python-version: "3.13"
-      - run: python3 validate.py
+
+      - name: Install engine (base deps, hash-locked)
+        working-directory: engine
+        run: uv sync --locked
+
+      - name: validate-dataset (full contract integrity)
+        run: engine/.venv/bin/levels validate-dataset "$GITHUB_WORKSPACE"
+
+      - name: sync + build smoke (clean apply, idempotent no-op, build)
+        env:
+          DATABASE_URL: sqlite:///${{ runner.temp }}/k.db
+          DATASET_DIR: ${{ github.workspace }}
+          OUTPUT_DIR: ${{ runner.temp }}/out
+        run: |
+          L=engine/.venv/bin/levels
+          "$L" init-db --no-seed
+          "$L" sync-metadata
+          "$L" sync-metadata
+          "$L" build
