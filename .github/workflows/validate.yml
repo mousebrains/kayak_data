@@ -28,6 +28,28 @@ jobs:
         with:
           fetch-depth: 0 # the PR base commit must be present for the trusted-pin read
 
+      # history/sql/ is a frozen byte-for-byte archive of the engine's relocated
+      # data migrations (S9b); the engine validator ignores it, so verify its
+      # integrity here (stdlib only) — manifest ↔ files 1:1 + every sha256 matches.
+      - name: Verify history/ archive integrity
+        run: |
+          python3 - <<'PY'
+          import csv, hashlib, sys
+          from pathlib import Path
+          h = Path("history/sql")
+          if not h.is_dir():
+              print("no history/sql — nothing to verify"); sys.exit(0)
+          rows = list(csv.DictReader((h / "manifest.csv").open(encoding="utf-8")))
+          listed = {r["filename"] for r in rows}
+          on_disk = {p.name for p in h.glob("*.sql")}
+          assert listed == on_disk, f"history manifest vs files mismatch: {listed ^ on_disk}"
+          assert len(listed) == len(rows), "duplicate filename in history manifest"
+          for r in rows:
+              actual = hashlib.sha256((h / r["filename"]).read_bytes()).hexdigest()
+              assert actual == r["sha256"], f"history sha256 drift: {r['filename']}"
+          print(f"history archive OK ({len(rows)} files, digests verified)")
+          PY
+
       - name: Resolve trusted engine pin (from the BASE commit, not the PR tree)
         id: pin
         run: |
