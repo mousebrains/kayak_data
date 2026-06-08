@@ -5,8 +5,10 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S1) to the engine commit carrying
-# `levels generate-sources` (#137), so a follow-up PR can add `generate-sources
-# --check` to the dataset CI. The CI reads this pin from the BASE commit (S4b-2
-# trust boundary), so the pin must land here before that --check step can pass.
-engine_test_ref: "8ce4b18c46058a0c656448c2b602f8a8b9635831"
+# S7 formalizes per-release pinning. Bumped (S1) to the engine commit that makes
+# each source's gauge a required `gauge_id` field and round-trips gauge_source.csv
+# (#140), matching this PR's re-bootstrapped sources.yaml. The CI reads this pin
+# from the BASE commit (S4b-2 trust boundary); the prior pin (#137) ignores the
+# new gauge_id field, so source.csv/fetch_url.csv stay byte-identical and this
+# PR's CI is green on the base engine, while main's push-CI uses #140.
+engine_test_ref: "9c34113080abce03ee11b5dab24ddf054d4fbb10"
