@@ -1,5 +1,6 @@
 # Authoritative source registry (dataset-separation S1). Edit this; run
-# `levels generate-sources <dir>` to (re)write source.csv + fetch_url.csv.
+# `levels generate-sources <dir>` to (re)write source.csv, fetch_url.csv,
+# gauge_source.csv.
 fetch_urls:
 - id: 1
   url: https://api.water.noaa.gov/nwps/v1/gauges/IMNO3/stageflow/observed
@@ -465,1142 +466,1470 @@ sources:
 - id: 1
   name: BCLO3
   agency: NWS
+  gauge_id: 104
   fetch_url_id: 22
 - id: 2
   name: ARWO3
   agency: NWS
+  gauge_id: 2
   fetch_url_id: 7
 - id: 3
   name: '14142800'
   agency: USGS
+  gauge_id: 3
 - id: 4
   name: BRTO3
   agency: NWS
+  gauge_id: 5
   fetch_url_id: 68
 - id: 5
   name: BLUO3
   agency: NWS
+  gauge_id: 6
   fetch_url_id: 23
 - id: 6
   name: '14316495'
   agency: USGS
+  gauge_id: 7
 - id: 7
   name: '13168500'
   agency: USGS
+  gauge_id: 9
 - id: 8
   name: '14140000'
   agency: USGS
+  gauge_id: 10
 - id: 9
   name: '14201500'
   agency: USGS
+  gauge_id: 11
 - id: 10
   name: Calapooia_Holly_calc
   agency: Calculation
+  gauge_id: 12
   calc_expression_id: 1
 - id: 11
   name: '14400000'
   agency: USGS
+  gauge_id: 13
 - id: 12
   name: TLYO3
   agency: NWS
+  gauge_id: 14
   fetch_url_id: 54
 - id: 13
   name: ESTO3
   agency: NWS
+  gauge_id: 15
   fetch_url_id: 25
 - id: 14
   name: POWO3
   agency: NWS
+  gauge_id: 16
   fetch_url_id: 14
 - id: 15
   name: AZAO3
   agency: NWS
+  gauge_id: 17
   fetch_url_id: 8
 - id: 16
   name: RDLO3
   agency: NWS
+  gauge_id: 18
   fetch_url_id: 15
 - id: 17
   name: GLNO3
   agency: NWS
+  gauge_id: 19
   fetch_url_id: 11
 - id: 18
   name: '14087400'
   agency: USGS
+  gauge_id: 20
 - id: 19
   name: '14087380'
   agency: USGS
+  gauge_id: 21
 - id: 20
   name: MODO3
   agency: NWS
+  gauge_id: 22
   fetch_url_id: 2
 - id: 21
   name: '14076500'
   agency: USGS
+  gauge_id: 23
 - id: 22
   name: BENO
   agency: USBR
+  gauge_id: 24
   timezone: America/Los_Angeles
   fetch_url_id: 86
 - id: 23
   name: DEBO
   agency: USBR
+  gauge_id: 25
   timezone: America/Los_Angeles
   fetch_url_id: 86
 - id: 24
   name: WICO
   agency: USBR
+  gauge_id: 26
   timezone: America/Los_Angeles
   fetch_url_id: 86
 - id: 25
   name: '14092500'
   agency: USGS
+  gauge_id: 27
 - id: 26
   name: '10396000'
   agency: USGS
+  gauge_id: 28
 - id: 27
   name: DRIFT_ALSEA_calc
   agency: Calculation
+  gauge_id: 29
   calc_expression_id: 2
 - id: 28
   name: DRIFT_SILETZ_calc
   agency: Calculation
+  gauge_id: 30
   calc_expression_id: 3
 - id: 29
   name: '14338000'
   agency: USGS
+  gauge_id: 31
 - id: 30
   name: ELKO3
   agency: NWS
+  gauge_id: 31
   fetch_url_id: 10
 - id: 31
   name: '14315950'
   agency: USGS
+  gauge_id: 33
 - id: 32
   name: LGNO3
   agency: NWS
+  gauge_id: 35
   fetch_url_id: 63
 - id: 33
   name: TRYO3
   agency: NWS
+  gauge_id: 36
   fetch_url_id: 5
 - id: 34
   name: HODO3
   agency: NWS
+  gauge_id: 37
   fetch_url_id: 29
 - id: 35
   name: KRBO3
   agency: NWS
+  gauge_id: 38
   fetch_url_id: 13
 - id: 37
   name: IMNO3
   agency: NWS
+  gauge_id: 39
   fetch_url_id: 1
 - id: 38
   name: '14048000'
   agency: USGS
+  gauge_id: 40
 - id: 39
   name: MONO3
   agency: NWS
+  gauge_id: 41
   fetch_url_id: 3
 - id: 40
   name: '14044000'
   agency: USGS
+  gauge_id: 42
 - id: 41
   name: SERO3
   agency: NWS
+  gauge_id: 43
   fetch_url_id: 4
 - id: 42
   name: '13313000'
   agency: USGS
+  gauge_id: 44
 - id: 43
   name: IRGC1
   agency: NOAA
+  gauge_id: 45
   fetch_url_id: 121
 - id: 44
   name: '11509500'
   agency: USGS
+  gauge_id: 46
 - id: 45
   name: '11510700'
   agency: USGS
+  gauge_id: 47
 - id: 46
   name: '11520500'
   agency: USGS
+  gauge_id: 48
 - id: 47
   name: '11530500'
   agency: USGS
+  gauge_id: 49
 - id: 48
   name: '11523000'
   agency: USGS
+  gauge_id: 50
 - id: 49
   name: '14113000'
   agency: USGS
+  gauge_id: 51
 - id: 50
   name: '14107000'
   agency: USGS
+  gauge_id: 52
 - id: 51
   name: HSSW1
   agency: NWS
+  gauge_id: 53
   fetch_url_id: 30
 - id: 52
   name: '11507500'
   agency: USGS
+  gauge_id: 54
 - id: 53
   name: '14318000'
   agency: USGS
+  gauge_id: 55
 - id: 54
   name: '13337000'
   agency: USGS
+  gauge_id: 56
 - id: 55
   name: MNRO3
   agency: NWS
+  gauge_id: 57
   fetch_url_id: 38
 - id: 56
   name: '14161500'
   agency: USGS
+  gauge_id: 58
 - id: 57
   name: SUVO3
   agency: NWS
+  gauge_id: 59
   fetch_url_id: 51
 - id: 58
   name: PHIO3
   agency: NWS
+  gauge_id: 60
   fetch_url_id: 42
 - id: 59
   name: '14162500'
   agency: USGS
+  gauge_id: 61
 - id: 60
   name: VIDO3
   agency: NWS
+  gauge_id: 61
   fetch_url_id: 58
 - id: 61
   name: '14164900'
   agency: USGS
+  gauge_id: 62
 - id: 62
   name: MCZO3
   agency: NWS
+  gauge_id: 63
   fetch_url_id: 35
 - id: 63
   name: SFCO3
   agency: NWS
+  gauge_id: 64
   fetch_url_id: 45
 - id: 64
   name: MKLO3
   agency: NWS
+  gauge_id: 66
   fetch_url_id: 37
 - id: 65
   name: '14091500'
   agency: USGS
+  gauge_id: 67
 - id: 66
   name: OAKO3
   agency: NWS
+  gauge_id: 68
   fetch_url_id: 40
 - id: 67
   name: JASO3
   agency: NWS
+  gauge_id: 69
   fetch_url_id: 31
 - id: 68
   name: '13331500'
   agency: USGS
+  gauge_id: 70
 - id: 69
   name: SPRO3
   agency: NWS
+  gauge_id: 71
   fetch_url_id: 49
 - id: 70
   name: CANO3
   agency: NWS
+  gauge_id: 72
   fetch_url_id: 24
 - id: 71
   name: VENO3
   agency: NWS
+  gauge_id: 73
   fetch_url_id: 57
 - id: 72
   name: '14301000'
   agency: USGS
+  gauge_id: 74
 - id: 73
   name: FSSO3
   agency: NWS
+  gauge_id: 74
   fetch_url_id: 27
 - id: 75
   name: BEAO3
   agency: NWS
+  gauge_id: 75
   fetch_url_id: 67
 - id: 76
   name: NF_ALSEA_calc
   agency: Calculation
+  gauge_id: 76
   calc_expression_id: 4
 - id: 77
   name: '13340600'
   agency: USGS
+  gauge_id: 77
 - id: 78
   name: ROMO
   agency: USBR
+  gauge_id: 79
   timezone: America/Boise
   fetch_url_id: 86
 - id: 79
   name: '13235000'
   agency: USGS
+  gauge_id: 80
 - id: 80
   name: '13237920'
   agency: USGS
+  gauge_id: 81
 - id: 81
   name: HRSI
   agency: USBR
+  gauge_id: 82
   timezone: America/Boise
   fetch_url_id: 86
 - id: 82
   name: CSCI
   agency: USBR
+  gauge_id: 83
   timezone: America/Boise
   fetch_url_id: 86
 - id: 83
   name: QCCO3
   agency: NWS
+  gauge_id: 84
   fetch_url_id: 44
 - id: 84
   name: GRAO3
   agency: NWS
+  gauge_id: 85
   fetch_url_id: 12
 - id: 85
   name: '14337600'
   agency: USGS
+  gauge_id: 86
 - id: 86
   name: AGNO3
   agency: NWS
+  gauge_id: 90
   fetch_url_id: 6
 - id: 87
   name: RYGO3
   agency: NWS
+  gauge_id: 91
   fetch_url_id: 16
 - id: 88
   name: '14155500'
   agency: USGS
+  gauge_id: 92
 - id: 89
   name: '14154500'
   agency: USGS
+  gauge_id: 93
 - id: 90
   name: SALMON_WILLAMETTE_calc
   agency: Calculation
+  gauge_id: 94
   calc_expression_id: 5
 - id: 91
   name: '13317000'
   agency: USGS
+  gauge_id: 95
 - id: 92
   name: '13310700'
   agency: USGS
+  gauge_id: 96
 - id: 93
   name: '13309220'
   agency: USGS
+  gauge_id: 97
 - id: 94
   name: '13316500'
   agency: USGS
+  gauge_id: 98
 - id: 95
   name: '13296500'
   agency: USGS
+  gauge_id: 99
 - id: 96
   name: '14141500'
   agency: USGS
+  gauge_id: 100
 - id: 97
   name: SNDO3
   agency: NWS
+  gauge_id: 101
   fetch_url_id: 48
 - id: 98
   name: SSCO3
   agency: NWS
+  gauge_id: 102
   fetch_url_id: 50
 - id: 99
   name: '14184100'
   agency: USGS
+  gauge_id: 105
 - id: 101
   name: WTLO3
   agency: NWS
+  gauge_id: 106
   fetch_url_id: 60
 - id: 103
   name: JFFO3
   agency: NWS
+  gauge_id: 108
   fetch_url_id: 32
 - id: 104
   name: '13336500'
   agency: USGS
+  gauge_id: 111
 - id: 105
   name: SF_ALSEA_calc
   agency: Calculation
+  gauge_id: 112
   calc_expression_id: 6
 - id: 106
   name: '13338500'
   agency: USGS
+  gauge_id: 113
 - id: 107
   name: MCMO3
   agency: NWS
+  gauge_id: 114
   fetch_url_id: 34
 - id: 108
   name: '14093000'
   agency: USGS
+  gauge_id: 115
 - id: 109
   name: '14092750'
   agency: USGS
+  gauge_id: 116
 - id: 110
   name: '14307620'
   agency: USGS
+  gauge_id: 118
 - id: 111
   name: MPLO3
   agency: NWS
+  gauge_id: 118
   fetch_url_id: 39
 - id: 112
   name: '11532500'
   agency: USGS
+  gauge_id: 119
 - id: 113
   name: SCRO3
   agency: NWS
+  gauge_id: 121
   fetch_url_id: 17
 - id: 114
   name: Sunshine_calc
   agency: Calculation
+  gauge_id: 122
   calc_expression_id: 7
 - id: 115
   name: '14188800'
   agency: USGS
+  gauge_id: 123
 - id: 116
   name: WSLO3
   agency: NWS
+  gauge_id: 124
   fetch_url_id: 59
 - id: 117
   name: FRMO3
   agency: NWS
+  gauge_id: 125
   fetch_url_id: 26
 - id: 118
   name: UMAO
   agency: USBR
+  gauge_id: 126
   timezone: America/Los_Angeles
   fetch_url_id: 86
 - id: 119
   name: '14316500'
   agency: USGS
+  gauge_id: 128
 - id: 120
   name: EKTO3
   agency: NWS
+  gauge_id: 130
   fetch_url_id: 9
 - id: 121
   name: WSNO3
   agency: NWS
+  gauge_id: 131
   fetch_url_id: 19
 - id: 122
   name: '14097100'
   agency: USGS
+  gauge_id: 132
 - id: 123
   name: WFHO3
   agency: NWS
+  gauge_id: 133
   fetch_url_id: 69
 - id: 125
   name: UNDW1
   agency: NWS
+  gauge_id: 135
   fetch_url_id: 56
 - id: 126
   name: '14187000'
   agency: USGS
+  gauge_id: 136
 - id: 128
   name: EUGO3
   agency: NWS
+  gauge_id: 137
   fetch_url_id: 116
 - id: 129
   name: GOSO3
   agency: NWS
+  gauge_id: 138
   fetch_url_id: 64
 - id: 131
   name: ALBO3
   agency: NWS
+  gauge_id: 139
   fetch_url_id: 20
 - id: 132
   name: LONO3
   agency: NWS
+  gauge_id: 140
   fetch_url_id: 65
 - id: 133
   name: '14197900'
   agency: USGS
+  gauge_id: 141
 - id: 135
   name: SLMO3
   agency: NWS
+  gauge_id: 142
   fetch_url_id: 47
 - id: 136
   name: '14153500'
   agency: USGS
+  gauge_id: 143
 - id: 137
   name: '14166000'
   agency: USGS
+  gauge_id: 144
 - id: 138
   name: HARO3
   agency: NWS
+  gauge_id: 144
   fetch_url_id: 28
 - id: 140
   name: OCUO3
   agency: NWS
+  gauge_id: 145
   fetch_url_id: 41
 - id: 141
   name: PRTO3
   agency: NWS
+  gauge_id: 146
   fetch_url_id: 43
 - id: 142
   name: '11493500'
   agency: USGS
+  gauge_id: 147
 - id: 143
   name: '14301500'
   agency: USGS
+  gauge_id: 148
 - id: 144
   name: TLMO3
   agency: NWS
+  gauge_id: 148
   fetch_url_id: 53
 - id: 145
   name: '14150800'
   agency: USGS
+  gauge_id: 149
 - id: 147
   name: BCKO3
   agency: NWS
+  gauge_id: 103
   fetch_url_id: 21
 - id: 148
   name: LSMO3
   agency: NWS
+  gauge_id: 110
   fetch_url_id: 33
 - id: 149
   name: MEHO3
   agency: NWS
+  gauge_id: 109
   fetch_url_id: 36
 - id: 150
   name: SILO3
   agency: NWS
+  gauge_id: 117
   fetch_url_id: 46
 - id: 151
   name: TIDO3
   agency: NWS
+  gauge_id: 1
   fetch_url_id: 52
 - id: 152
   name: TILO3
   agency: NWS
+  gauge_id: 127
   fetch_url_id: 18
 - id: 153
   name: HCDI
   agency: USBR
+  gauge_id: 120
   timezone: America/Boise
   fetch_url_id: 86
 - id: 154
   name: '13176400'
   agency: USGS
+  gauge_id: 154
 - id: 155
   name: '13246000'
   agency: USGS
+  gauge_id: 155
 - id: 156
   name: '13296000'
   agency: USGS
+  gauge_id: 156
 - id: 157
   name: '10317500'
   agency: USGS
+  gauge_id: 151
 - id: 158
   name: '13161500'
   agency: USGS
+  gauge_id: 152
 - id: 159
   name: '13162225'
   agency: USGS
+  gauge_id: 153
 - id: 160
   name: '14137000'
   agency: USGS
+  gauge_id: 157
 - id: 161
   name: '14158500'
   agency: USGS
+  gauge_id: 65
 - id: 162
   name: '14173500'
   agency: USGS
+  gauge_id: 164
 - id: 163
   name: '14185800'
   agency: USGS
+  gauge_id: 158
 - id: 164
   name: '14198500'
   agency: USGS
+  gauge_id: 162
 - id: 165
   name: '14209250'
   agency: USGS
+  gauge_id: 159
 - id: 166
   name: '14209700'
   agency: USGS
+  gauge_id: 34
 - id: 167
   name: '14312000'
   agency: USGS
+  gauge_id: 131
 - id: 168
   name: '14332000'
   agency: USGS
+  gauge_id: 160
 - id: 169
   name: '14337500'
   agency: USGS
+  gauge_id: 4
 - id: 170
   name: '14378200'
   agency: USGS
+  gauge_id: 163
 - id: 171
   name: FAL
   agency: USACE
+  gauge_id: 32
   fetch_url_id: 79
 - id: 172
   name: LOCO3
   agency: NWRFC
+  gauge_id: 58
   fetch_url_id: 84
 - id: 173
   name: WNFO3
   agency: NWRFC
+  gauge_id: 136
   fetch_url_id: 85
 - id: 175
   name: BRBO3
   agency: NWS
+  gauge_id: 8
   fetch_url_id: 81
 - id: 177
   name: NMFO3
   agency: NWS
+  gauge_id: 78
   fetch_url_id: 82
 - id: 179
   name: CMRO3
   agency: NWRFC
+  gauge_id: 177
   fetch_url_id: 83
 - id: 180
   name: GPR
   agency: USACE
+  gauge_id: 107
   fetch_url_id: 70
 - id: 182
   name: 29C100_DSG_FM
   agency: WA DOE
+  gauge_id: 150
   timezone: Etc/GMT+8
   fetch_url_id: 72
 - id: 183
   name: '14178000'
   agency: USGS
+  gauge_id: 103
 - id: 184
   name: '14305500'
   agency: USGS
+  gauge_id: 117
 - id: 185
   name: '14306500'
   agency: USGS
+  gauge_id: 1
 - id: 186
   name: '14145500'
   agency: USGS
+  gauge_id: 165
 - id: 187
   name: '14319500'
   agency: USGS
+  gauge_id: 166
 - id: 188
   name: '14308910'
   agency: USGS
+  gauge_id: 167
 - id: 189
   name: '14020000'
   agency: USGS
+  gauge_id: 168
 - id: 190
   name: '14300350'
   agency: USGS
+  gauge_id: 170
 - id: 191
   name: '14188750'
   agency: USGS
+  gauge_id: 171
 - id: 192
   name: Hood_EFMF_calc
   agency: Calculation
+  gauge_id: 172
   calc_expression_id: 9
 - id: 193
   name: TRAO3
   agency: NWS
+  gauge_id: 173
   fetch_url_id: 55
 - id: 194
   name: WLAO3
   agency: NWS
+  gauge_id: 175
   fetch_url_id: 66
 - id: 195
   name: '14302480'
   agency: USGS
+  gauge_id: 173
 - id: 196
   name: '14170000'
   agency: USGS
+  gauge_id: 57
 - id: 198
   name: Fall_Creek_above_Winberry_calc
   agency: Calculation
+  gauge_id: 174
   calc_expression_id: 10
 - id: 199
   name: '14159500'
   agency: USGS
+  gauge_id: 176
 - id: 200
   name: Applegate_Lake_inflow_to_flow
   agency: Calculation
+  gauge_id: 161
   calc_expression_id: 11
 - id: 201
   name: '13297380'
   agency: USGS
+  gauge_id: 178
 - id: 202
   name: '13307000'
   agency: USGS
+  gauge_id: 179
 - id: 203
   name: '13311000'
   agency: USGS
+  gauge_id: 180
 - id: 204
   name: SRYI1
   agency: NWRFC
+  gauge_id: 99
   fetch_url_id: 105
 - id: 205
   name: MIDI1
   agency: NWRFC
+  gauge_id: 97
   fetch_url_id: 106
 - id: 206
   name: KRSI1
   agency: NWRFC
+  gauge_id: 96
   fetch_url_id: 107
 - id: 207
   name: JOHI1
   agency: NWRFC
+  gauge_id: 44
   fetch_url_id: 108
 - id: 208
   name: RIGI1
   agency: NWRFC
+  gauge_id: 98
   fetch_url_id: 109
 - id: 209
   name: WHBI1
   agency: NWRFC
+  gauge_id: 95
   fetch_url_id: 110
 - id: 210
   name: EFSF_Salmon_calc
   agency: Calculation
+  gauge_id: 181
   calc_expression_id: 12
 - id: 211
   name: SELI1
   agency: NWRFC
+  gauge_id: 111
   fetch_url_id: 111
 - id: 212
   name: LOCI1
   agency: NWRFC
+  gauge_id: 56
   fetch_url_id: 112
 - id: 213
   name: STII1
   agency: NWRFC
+  gauge_id: 113
   fetch_url_id: 113
 - id: 214
   name: PITW1
   agency: NWRFC
+  gauge_id: 51
   fetch_url_id: 114
 - id: 215
   name: KLCW1
   agency: NWRFC
+  gauge_id: 52
   fetch_url_id: 115
 - id: 216
   name: LWWW1
   agency: NWS
+  gauge_id: 182
   fetch_url_id: 99
 - id: 217
   name: WCNW1
   agency: NWS
+  gauge_id: 183
   fetch_url_id: 100
 - id: 220
   name: 28B080_DSG_FM
   agency: WA DOE
+  gauge_id: 184
   timezone: Etc/GMT+8
   fetch_url_id: 103
 - id: 221
   name: CORO3
   agency: NWS
+  gauge_id: 185
   fetch_url_id: 104
 - id: 222
   name: '14171600'
   agency: USGS
+  gauge_id: 185
 - id: 223
   name: '14174000'
   agency: USGS
+  gauge_id: 139
 - id: 224
   name: '14158850'
   agency: USGS
+  gauge_id: 186
 - id: 225
   name: '14152500'
   agency: USGS
+  gauge_id: 140
 - id: 226
   name: '14369500'
   agency: USGS
+  gauge_id: 2
 - id: 228
   name: '14162200'
   agency: USGS
+  gauge_id: 6
 - id: 229
   name: '14179000'
   agency: USGS
+  gauge_id: 8
 - id: 230
   name: '14209500'
   agency: USGS
+  gauge_id: 14
 - id: 231
   name: '14210000'
   agency: USGS
+  gauge_id: 15
 - id: 232
   name: '14325000'
   agency: USGS
+  gauge_id: 16
 - id: 233
   name: '14309000'
   agency: USGS
+  gauge_id: 17
 - id: 234
   name: '14310000'
   agency: USGS
+  gauge_id: 18
 - id: 235
   name: '14309500'
   agency: USGS
+  gauge_id: 19
 - id: 236
   name: '14103000'
   agency: USGS
+  gauge_id: 22
 - id: 239
   name: '14151000'
   agency: USGS
+  gauge_id: 32
 - id: 240
   name: '13333000'
   agency: USGS
+  gauge_id: 36
 - id: 241
   name: '14120000'
   agency: USGS
+  gauge_id: 37
 - id: 242
   name: '14377100'
   agency: USGS
+  gauge_id: 38
 - id: 243
   name: '14046000'
   agency: USGS
+  gauge_id: 41
 - id: 244
   name: '14046500'
   agency: USGS
+  gauge_id: 43
 - id: 245
   name: '11516530'
   agency: USGS
+  gauge_id: 45
 - id: 246
   name: '14222500'
   agency: USGS
+  gauge_id: 53
 - id: 247
   name: '14190500'
   agency: USGS
+  gauge_id: 59
 - id: 248
   name: '14171000'
   agency: USGS
+  gauge_id: 60
 - id: 249
   name: '14163900'
   agency: USGS
+  gauge_id: 63
 - id: 250
   name: '14159200'
   agency: USGS
+  gauge_id: 64
 - id: 251
   name: '14163150'
   agency: USGS
+  gauge_id: 66
 - id: 252
   name: '14148000'
   agency: USGS
+  gauge_id: 68
 - id: 253
   name: '14152000'
   agency: USGS
+  gauge_id: 69
 - id: 254
   name: '14165000'
   agency: USGS
+  gauge_id: 71
 - id: 255
   name: '14200000'
   agency: USGS
+  gauge_id: 72
 - id: 256
   name: '14299800'
   agency: USGS
+  gauge_id: 73
 - id: 257
   name: '14303600'
   agency: USGS
+  gauge_id: 75
 - id: 259
   name: '13181000'
   agency: USGS
+  gauge_id: 79
 - id: 260
   name: '13247500'
   agency: USGS
+  gauge_id: 82
 - id: 262
   name: '14185900'
   agency: USGS
+  gauge_id: 84
 - id: 263
   name: '14361500'
   agency: USGS
+  gauge_id: 85
 - id: 264
   name: '14328000'
   agency: USGS
+  gauge_id: 88
 - id: 265
   name: '14372300'
   agency: USGS
+  gauge_id: 90
 - id: 266
   name: '14359000'
   agency: USGS
+  gauge_id: 91
 - id: 267
   name: '14142500'
   agency: USGS
+  gauge_id: 101
 - id: 268
   name: '14185000'
   agency: USGS
+  gauge_id: 102
 - id: 269
   name: '14181500'
   agency: USGS
+  gauge_id: 104
 - id: 270
   name: '14187500'
   agency: USGS
+  gauge_id: 106
 - id: 271
   name: '14189000'
   agency: USGS
+  gauge_id: 108
 - id: 272
   name: '14183000'
   agency: USGS
+  gauge_id: 109
 - id: 273
   name: '14182500'
   agency: USGS
+  gauge_id: 110
 - id: 274
   name: '14194150'
   agency: USGS
+  gauge_id: 114
 - id: 276
   name: '14316700'
   agency: USGS
+  gauge_id: 121
 - id: 277
   name: '14207500'
   agency: USGS
+  gauge_id: 124
 - id: 279
   name: '14033500'
   agency: USGS
+  gauge_id: 126
 - id: 280
   name: '14308000'
   agency: USGS
+  gauge_id: 127
 - id: 281
   name: '14316800'
   agency: USGS
+  gauge_id: 129
 - id: 282
   name: '14321000'
   agency: USGS
+  gauge_id: 130
 - id: 284
   name: '14101500'
   agency: USGS
+  gauge_id: 134
 - id: 285
   name: '14123500'
   agency: USGS
+  gauge_id: 135
 - id: 286
   name: '14158050'
   agency: USGS
+  gauge_id: 137
 - id: 287
   name: '14157500'
   agency: USGS
+  gauge_id: 138
 - id: 288
   name: '14191000'
   agency: USGS
+  gauge_id: 142
 - id: 289
   name: '14207740'
   agency: USGS
+  gauge_id: 145
 - id: 290
   name: '14211720'
   agency: USGS
+  gauge_id: 146
 - id: 292
   name: '14300000'
   agency: USGS
+  gauge_id: 169
 - id: 293
   name: '14128500'
   agency: USGS
+  gauge_id: 183
 - id: 294
   name: 29C100_STG_FM
   agency: WA DOE
+  gauge_id: 150
   timezone: Etc/GMT+8
   fetch_url_id: 71
 - id: 295
   name: 29C100_WTM_FM
   agency: WA DOE
+  gauge_id: 150
   timezone: Etc/GMT+8
   fetch_url_id: 73
 - id: 296
   name: 28B080_STG_FM
   agency: WA DOE
+  gauge_id: 184
   timezone: Etc/GMT+8
   fetch_url_id: 102
 - id: 297
   name: 28B080_WTM_FM
   agency: WA DOE
+  gauge_id: 184
   timezone: Etc/GMT+8
   fetch_url_id: 101
 - id: 298
   name: WASW1
   agency: NWS
+  gauge_id: 184
   fetch_url_id: 61
 - id: 299
   name: APLO3
   agency: NWRFC
+  gauge_id: 161
   fetch_url_id: 80
 - id: 300
   name: FALO3
   agency: NWRFC
+  gauge_id: 174
   fetch_url_id: 87
 - id: 301
   name: '14307605'
   agency: USGS
+  gauge_id: 187
 - id: 302
   name: Siuslaw_above_LakeCreek_calc
   agency: Calculation
+  gauge_id: 188
   calc_expression_id: 13
 - id: 303
   name: NEBO3
   agency: NWS
+  gauge_id: 141
   fetch_url_id: 117
 - id: 304
   name: ORCO3
   agency: NWS
+  gauge_id: 190
   fetch_url_id: 118
 - id: 306
   name: COCO3
   agency: NWS
+  gauge_id: 192
   fetch_url_id: 120
 - id: 307
   name: '14207770'
   agency: USGS
+  gauge_id: 190
 - id: 308
   name: '14208000'
   agency: USGS
+  gauge_id: 191
 - id: 309
   name: '14211010'
   agency: USGS
+  gauge_id: 192
 - id: 310
   name: RCBO3
   agency: NWS
+  gauge_id: 193
   fetch_url_id: 122
 - id: 311
   name: '14330000'
   agency: USGS
+  gauge_id: 194
 - id: 312
   name: PR2R.NFD_BYP_80FL_PI
   agency: PacifiCorp
+  gauge_id: 195
   timezone: America/Los_Angeles
   fetch_url_id: 123
 - id: 313
   name: Rogue_Above_Prospect_calc
   agency: Calculation
+  gauge_id: 196
   calc_expression_id: 14
 - id: 314
   name: 06090500
   agency: USGS
+  gauge_id: 197
 - id: 315
   name: '06025500'
   agency: USGS
+  gauge_id: 198
 - id: 316
   name: '06025250'
   agency: USGS
+  gauge_id: 199
 - id: 317
   name: '12340000'
   agency: USGS
+  gauge_id: 200
 - id: 318
   name: '12354500'
   agency: USGS
+  gauge_id: 201
 - id: 319
   name: '06073500'
   agency: USGS
+  gauge_id: 202
 - id: 320
   name: '12359800'
   agency: USGS
+  gauge_id: 203
 - id: 321
   name: '06036650'
   agency: USGS
+  gauge_id: 204
 - id: 322
   name: 06038800
   agency: USGS
+  gauge_id: 205
 - id: 323
   name: '06066500'
   agency: USGS
+  gauge_id: 206
 - id: 324
   name: '06077200'
   agency: USGS
+  gauge_id: 207
 - id: 325
   name: '06077500'
   agency: USGS
+  gauge_id: 208
 - id: 326
   name: 06085800
   agency: USGS
+  gauge_id: 209
 - id: 327
   name: McKenzie_McKenzie_Bridge_calc
   agency: Calculation
+  gauge_id: 210
   calc_expression_id: 15
 - id: 328
   name: Horse_Creek_calc
   agency: Calculation
+  gauge_id: 211
   calc_expression_id: 16
 - id: 329
   name: GPRO3
   agency: NWRFC
+  gauge_id: 107
   fetch_url_id: 124
 - id: 330
   name: '14147500'
   agency: USGS
+  gauge_id: 78
 - id: 331
   name: '14161100'
   agency: USGS
+  gauge_id: 5
 - id: 333
   name: '454249120423500'
   agency: USGS
+  gauge_id: 213
 - id: 334
   name: '14105700'
   agency: USGS
+  gauge_id: 214
 - id: 335
   name: '14128870'
   agency: USGS
+  gauge_id: 215
 - id: 336
   name: '453845121564001'
   agency: USGS
+  gauge_id: 215
 - id: 337
   name: '14216000'
   agency: USGS
+  gauge_id: 216
 - id: 338
   name: '14219000'
   agency: USGS
+  gauge_id: 217
 - id: 339
   name: CRPO3
   agency: NWS
+  gauge_id: 218
   fetch_url_id: 125
 - id: 340
   name: PRVO3
   agency: NWS
+  gauge_id: 219
   fetch_url_id: 126
 - id: 341
   name: CRSO3
   agency: NWRFC
+  gauge_id: 220
   fetch_url_id: 127
 - id: 342
   name: OCHO3
   agency: NWS
+  gauge_id: 221
   fetch_url_id: 128
 - id: 343
   name: JDA
   agency: USACE
+  gauge_id: 213
   fetch_url_id: 129
 - id: 344
   name: BON
   agency: USACE
+  gauge_id: 215
   fetch_url_id: 130
 - id: 345
   name: VAPW1
   agency: NWS
+  gauge_id: 222
   fetch_url_id: 131
 - id: 346
   name: SHNO3
   agency: NWS
+  gauge_id: 223
   fetch_url_id: 132
 - id: 347
   name: Smith_Gardiner_calc
   agency: Calculation
+  gauge_id: 224
   calc_expression_id: 17
 - id: 348
   name: SF_Salmon_MackayBar_calc
   agency: Calculation
+  gauge_id: 225
   calc_expression_id: 18
 - id: 349
   name: Secesh_Burgdorf_calc
   agency: Calculation
+  gauge_id: 226
   calc_expression_id: 19
 - id: 350
   name: '14236200'
   agency: USGS
+  gauge_id: 227
 - id: 351
   name: '14242580'
   agency: USGS
+  gauge_id: 228
 - id: 352
   name: '14240525'
   agency: USGS
+  gauge_id: 229
 - id: 353
   name: SF_Toutle_calc
   agency: Calculation
+  gauge_id: 230
   calc_expression_id: 20
 - id: 354
   name: Kalama_ItalianCreek_calc
   agency: Calculation
+  gauge_id: 231
   calc_expression_id: 21
 - id: 355
   name: Coweeman_Kelso_calc
   agency: Calculation
+  gauge_id: 232
   calc_expression_id: 22
 - id: 356
   name: Green_Toutle_calc
   agency: Calculation
+  gauge_id: 233
   calc_expression_id: 23
