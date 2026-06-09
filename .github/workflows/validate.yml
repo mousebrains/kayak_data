@@ -9,10 +9,9 @@ name: validate
 # `pull_request` (never pull_request_target): a fork PR simply lacks the secret
 # and fails the engine checkout — no secret exposure.
 #
-# Not yet a *required* gate: branch protection on this repo's main is deferred to
-# SA, because the nightly snapshot (scripts/snapshot_metadata.sh) still pushes
-# directly to main and protection would reject that push. Until then this runs on
-# every PR + push for visibility; SA removes the snapshot and makes it required.
+# This is a *required* gate: main is branch-protected (the `validate` check is
+# required + enforce_admins), enabled once the engine's SA-teardown retired the
+# nightly snapshot's direct push to main — PRs are now the only path here.
 
 on:
   push:

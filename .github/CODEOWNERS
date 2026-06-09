@@ -1,6 +1,7 @@
-# Pin + CI changes should get owner review. Advisory for now (auto-requests
-# review); becomes a hard gate when SA enables branch protection with
-# require_code_owner_reviews on this repo's main (the snapshot direct-push that
-# blocks protection today is removed in SA). See kayak_python deploy/SETUP.md §2.6.
+# Pin + CI changes get owner review — CODEOWNERS auto-requests @mousebrains
+# (advisory). main is branch-protected (the `validate` check is required +
+# enforce_admins) since the engine's SA-teardown retired the snapshot's direct
+# push; code-owner review is not set as a hard gate. See kayak_python
+# deploy/SETUP.md §2.6.
 /dataset.yaml   @mousebrains
 /.github/       @mousebrains
