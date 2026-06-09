@@ -162,7 +162,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 1.14988 * ef::EF_Lewis_Washington_merge::flow + 0.24075 * ti::14236200::flow + -3.84488e-05 * ef::EF_Lewis_Washington_merge::flow * ef::EF_Lewis_Washington_merge::flow +187.2))
 time_expression: ef::EF_Lewis_Washington_merge::flow ti::14236200::flow
-note:            multi-linear+quadratic(14222500) regression fit. n=7199 daily means, window 1956-10-01..1982-09-12, r2=0.9349, RMSE=312.6 cfs. See docs/regression/kalama_14223500_from_eflewis_tilton.md.
+note:            multi-linear+quadratic(14222500) regression fit. n=7199 daily means, window 1956-10-01..1982-09-12, r2=0.9349, RMSE=312.6 cfs. See regression/kalama_14223500_from_eflewis_tilton.md.
 provenance_slug: kalama_14223500_from_eflewis_tilton
 ```
 

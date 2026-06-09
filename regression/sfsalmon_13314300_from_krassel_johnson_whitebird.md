@@ -176,7 +176,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 1.47919 * kr::SF_Salmon_Krassel_merge::flow + 1.87198 * jo::Johnson_Yellopine_merge::flow + 0.0509071 * wb::Salmon_Whitebird_merge::flow -41.03))
 time_expression: kr::SF_Salmon_Krassel_merge::flow jo::Johnson_Yellopine_merge::flow wb::Salmon_Whitebird_merge::flow
-note:            multi-linear regression fit. n=3652 daily means, window 1993-10-01..2003-09-30, r2=0.9960, RMSE=183.2 cfs. See docs/regression/sfsalmon_13314300_from_krassel_johnson_whitebird.md.
+note:            multi-linear regression fit. n=3652 daily means, window 1993-10-01..2003-09-30, r2=0.9960, RMSE=183.2 cfs. See regression/sfsalmon_13314300_from_krassel_johnson_whitebird.md.
 provenance_slug: sfsalmon_13314300_from_krassel_johnson_whitebird
 ```
 
