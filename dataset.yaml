@@ -5,12 +5,12 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S2-D2) to the engine commit that adds
-# the regression-content validator + sanitizers (kayak.web.regression +
-# validate-dataset's _check_regression — kayak_python #152), so this repo's CI
-# enforces the regression/ report assets. The CI reads this pin from the BASE
-# commit (S4b-2 trust boundary): this is a pin-only change with no content edit, so
-# it is byte-clean under the prior (#140) engine and this PR's CI is green on the
-# base engine. Once merged, the content PR (#15, rebased) validates regression/
-# under this engine; the prior pin (9c34113, #140) has no regression check.
-engine_test_ref: "6d291fd7bf418be8bc5a5a98ebe3e7acc6c77cd3"
+# S7 formalizes per-release pinning. Bumped (S3a-D1) to the engine commit that adds
+# the dataset site-identity validator (kayak.dataset.site + validate-dataset's
+# _check_site_yaml — kayak_python #155/#158, S3a), so this repo's CI enforces an
+# (opt-in) site.yaml. The CI reads this pin from the BASE commit (S4b-2 trust
+# boundary): this is a pin-only change with no content edit, so it is byte-clean
+# under the prior engine and this PR's CI is green on the base engine. Once merged,
+# the content PR (S3a-D2, rebased) validates site.yaml under this engine; the prior
+# pin (6d291fd, S2-E1) has no site check.
+engine_test_ref: "c335cb1733429a5ddecce34588bdb4c70dc89321"
