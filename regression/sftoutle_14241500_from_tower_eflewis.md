@@ -169,7 +169,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.259162 * tw::14242580::flow + 0.210774 * ef::EF_Lewis_Washington_merge::flow -75.92))
 time_expression: tw::14242580::flow ef::EF_Lewis_Washington_merge::flow
-note:            multi-linear regression fit. n=6451 daily means, window 1996-02-01..2013-09-29, r2=0.9441, RMSE=188.8 cfs. See docs/regression/sftoutle_14241500_from_tower_eflewis.md.
+note:            multi-linear regression fit. n=6451 daily means, window 1996-02-01..2013-09-29, r2=0.9441, RMSE=188.8 cfs. See regression/sftoutle_14241500_from_tower_eflewis.md.
 provenance_slug: sftoutle_14241500_from_tower_eflewis
 ```
 

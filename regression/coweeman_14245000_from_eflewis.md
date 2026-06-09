@@ -154,7 +154,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.574501 * ef::EF_Lewis_Washington_merge::flow + -9.5595e-06 * ef::EF_Lewis_Washington_merge::flow * ef::EF_Lewis_Washington_merge::flow -4.64))
 time_expression: ef::EF_Lewis_Washington_merge::flow
-note:            linear+quadratic regression fit. n=12417 daily means, window 1950-10-01..1984-09-30, r2=0.8975, RMSE=173.7 cfs. See docs/regression/coweeman_14245000_from_eflewis.md.
+note:            linear+quadratic regression fit. n=12417 daily means, window 1950-10-01..1984-09-30, r2=0.8975, RMSE=173.7 cfs. See regression/coweeman_14245000_from_eflewis.md.
 provenance_slug: coweeman_14245000_from_eflewis
 ```
 

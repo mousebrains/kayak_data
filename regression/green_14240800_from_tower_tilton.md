@@ -156,7 +156,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.204922 * tw::14242580::flow + 0.108959 * ti::14236200::flow +0.6843))
 time_expression: tw::14242580::flow ti::14236200::flow
-note:            multi-linear regression fit. n=1825 daily means, window 1989-10-01..1994-09-29, r2=0.9530, RMSE=101.4 cfs. See docs/regression/green_14240800_from_tower_tilton.md.
+note:            multi-linear regression fit. n=1825 daily means, window 1989-10-01..1994-09-29, r2=0.9530, RMSE=101.4 cfs. See regression/green_14240800_from_tower_tilton.md.
 provenance_slug: green_14240800_from_tower_tilton
 ```
 

@@ -155,7 +155,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.254289 * jo::Johnson_Yellopine_merge::flow + 0.00910427 * wb::Salmon_Whitebird_merge::flow -10.76))
 time_expression: jo::Johnson_Yellopine_merge::flow wb::Salmon_Whitebird_merge::flow
-note:            multi-linear regression fit. n=3338 daily means, window 1943-04-12..1952-05-31, r2=0.9731, RMSE=48.2 cfs. See docs/regression/secesh_13313500_from_johnson_whitebird.md.
+note:            multi-linear regression fit. n=3338 daily means, window 1943-04-12..1952-05-31, r2=0.9731, RMSE=48.2 cfs. See regression/secesh_13313500_from_johnson_whitebird.md.
 provenance_slug: secesh_13313500_from_johnson_whitebird
 ```
 

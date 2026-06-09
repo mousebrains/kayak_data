@@ -158,7 +158,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.177027 * jo::Johnson_Yellopine_merge::flow + 3.02123 * st::EFSF_Stibnite::flow +14.26))
 time_expression: jo::Johnson_Yellopine_merge::flow st::EFSF_Stibnite::flow
-note:            multi-linear regression fit. n=5044 daily means, window 1928-08-13..1943-07-14, r2=0.9801, RMSE=26.5 cfs. See docs/regression/efsf_13312000_from_johnson_stibnite.md.
+note:            multi-linear regression fit. n=5044 daily means, window 1928-08-13..1943-07-14, r2=0.9801, RMSE=26.5 cfs. See regression/efsf_13312000_from_johnson_stibnite.md.
 provenance_slug: efsf_13312000_from_johnson_stibnite
 ```
 

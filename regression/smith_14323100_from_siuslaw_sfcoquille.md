@@ -159,7 +159,7 @@ SE = sqrt(Var)
 data_type:       flow
 expression:      round(greatest(0, 0.288564 * sm::Suislaw_Mapleton_merge::flow + 0.130486 * cp::Coquille_Powers_merge::flow + 2.12545e-06 * sm::Suislaw_Mapleton_merge::flow * sm::Suislaw_Mapleton_merge::flow -73.45))
 time_expression: sm::Suislaw_Mapleton_merge::flow cp::Coquille_Powers_merge::flow
-note:            multi-linear+quadratic(14307620) regression fit. n=2100 daily means, window 1967-10-01..1973-06-30, r2=0.9366, RMSE=360.4 cfs. See docs/regression/smith_14323100_from_siuslaw_sfcoquille.md.
+note:            multi-linear+quadratic(14307620) regression fit. n=2100 daily means, window 1967-10-01..1973-06-30, r2=0.9366, RMSE=360.4 cfs. See regression/smith_14323100_from_siuslaw_sfcoquille.md.
 provenance_slug: smith_14323100_from_siuslaw_sfcoquille
 ```
 
