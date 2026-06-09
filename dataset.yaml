@@ -5,10 +5,12 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S1) to the engine commit that makes
-# each source's gauge a required `gauge_id` field and round-trips gauge_source.csv
-# (#140), matching this PR's re-bootstrapped sources.yaml. The CI reads this pin
-# from the BASE commit (S4b-2 trust boundary); the prior pin (#137) ignores the
-# new gauge_id field, so source.csv/fetch_url.csv stay byte-identical and this
-# PR's CI is green on the base engine, while main's push-CI uses #140.
-engine_test_ref: "9c34113080abce03ee11b5dab24ddf054d4fbb10"
+# S7 formalizes per-release pinning. Bumped (S2-D2) to the engine commit that adds
+# the regression-content validator + sanitizers (kayak.web.regression +
+# validate-dataset's _check_regression — kayak_python #152), so this repo's CI
+# enforces the regression/ report assets. The CI reads this pin from the BASE
+# commit (S4b-2 trust boundary): this is a pin-only change with no content edit, so
+# it is byte-clean under the prior (#140) engine and this PR's CI is green on the
+# base engine. Once merged, the content PR (#15, rebased) validates regression/
+# under this engine; the prior pin (9c34113, #140) has no regression check.
+engine_test_ref: "6d291fd7bf418be8bc5a5a98ebe3e7acc6c77cd3"
