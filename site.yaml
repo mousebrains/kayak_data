@@ -1,12 +1,14 @@
 # Site identity — see kayak.dataset.site (SiteConfig) in the kayak engine.
 #
-# This is the WKCC deployment's branding/identity. The engine reads it with
-# resolution: engine defaults < this site.yaml < allowed host env. Validated by
-# `levels validate-dataset` (_check_site_yaml) and emitted into the runtime-config
-# JSON for PHP by `levels emit-config`. The values below currently match the
-# engine's built-in defaults, so the rendered site is unchanged; declaring them
-# explicitly makes this dataset the source of truth for identity, so the engine
-# defaults can later be genericized (S3i) without changing the WKCC site.
+# This is the WKCC deployment's branding/identity. These fields resolve as
+# `engine defaults < this site.yaml` — they have no host-env override; env-backed
+# identity keys like SITE_URL live in the engine/host config, separate from this
+# dataset-owned file. Validated by `levels validate-dataset` (_check_site_yaml) and
+# emitted into the runtime-config JSON for PHP by `levels emit-config`. The values
+# below currently match the engine's built-in defaults, so the rendered site is
+# unchanged; declaring them explicitly makes this dataset the source of truth for
+# identity, so the engine defaults can later be genericized (S3i) without changing
+# the WKCC site.
 site_name: WKCC River Levels
 org_name: Willamette Kayak and Canoe Club
 org_url: https://wkcc.org
