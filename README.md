@@ -1,10 +1,10 @@
 # kayak_data
 
-The **metadata snapshot** for [kayak](https://github.com/mousebrains/kayak_python)
+The **metadata dataset** for [kayak](https://github.com/mousebrains/kayak_python)
 (levels.wkcc.org) — the single source of truth for gauges, sources, reaches, and
-their relationships. Split out of the code repo so high-churn data edits and the
-nightly prod snapshot don't churn `main` of the code repo (and so the code repo's
-`main` can be branch-protected).
+their relationships. Split out of the code repo so high-churn data edits don't
+churn `main` of the code repo (and so the code repo's `main` can be
+branch-protected).
 
 ## Contents
 
@@ -17,18 +17,23 @@ nightly prod snapshot don't churn `main` of the code repo (and so the code repo'
   `import_metadata.py --geom-only`.
 - **`reaches-gradient.json`** — `reach.gradient_profile`, same rationale.
   Applied with `--gradient-only`.
+- **`regression/`** — published regression analyses (`<slug>.{md,svg,json}`) for
+  the flow-estimation `calc_expression` formulas, keyed by
+  `calc_expression.provenance_slug` and rendered to `/static/regression/` at build.
+  See [`regression/README.md`](regression/README.md). The engine sanitizes them
+  (markdown via `nh3`, SVG via a strict allowlist) at validate + build time.
 
 Schema (table shape) lives in the **code** repo (`data/db/migrations/`), not here.
 
 ## How it changes
 
-- **Humans** edit metadata via a **PR** here (CI below gates it). A new row takes
-  the next id from `id_counters.csv` and bumps the counter (ids only ever
-  increment). See the code repo's
-  [`docs/PLAN_add_gauges_reaches.md`](https://github.com/mousebrains/kayak_python/blob/main/docs/PLAN_add_gauges_reaches.md).
-- **The prod host** auto-commits the nightly metadata snapshot to `main` here
-  (`scripts/snapshot_metadata.sh`), reconciling editor-approved prod-direct edits
-  back into the CSVs.
+**Humans** edit metadata via a **PR** here (CI below gates it). A new row takes
+the next id from `id_counters.csv` and bumps the counter (ids only ever
+increment). See the code repo's
+[`docs/PLAN_add_gauges_reaches.md`](https://github.com/mousebrains/kayak_python/blob/main/docs/PLAN_add_gauges_reaches.md).
+A PR is now the **only** way `main` changes — the former nightly prod→dataset
+snapshot (`snapshot_metadata.sh`) was retired in the engine's SA-teardown, and
+there is no reverse sync from the live DB back to the dataset.
 
 ## How it's consumed
 
@@ -49,7 +54,7 @@ and complete-projection file presence. It then runs an `init-db → sync-metadat
 no-op sync-metadata → build` smoke against a throwaway DB. (This replaced the old
 stdlib `validate.py`, which only checked CSV parsing + id-counters.)
 
-The check runs on every PR and push for visibility, but is **not yet a required
-gate** — branch protection here waits until the nightly snapshot's direct push to
-`main` is removed (engine plan slice SA); enforcement until then is PR-CI
-visibility plus the deploy-time `validate-dataset` in `scripts/deploy.sh`.
+`main` is **branch-protected**: the `validate` check is a **required gate** and
+`enforce_admins` is on, so every change lands through a reviewed PR with green CI
+(no direct pushes). The deploy-time `validate-dataset` in `scripts/deploy.sh` is
+the second line of enforcement.
