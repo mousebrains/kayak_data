@@ -1,0 +1,140 @@
+# Region presentation — see kayak.dataset.region (RegionConfig) in the kayak engine.
+#
+# Per-state curated external-resource links + the "Weather" nav URL for the WKCC
+# deployment. The engine reads this with resolution: engine defaults < this file
+# (a present file fully DEFINES the set — replace, not per-state merge — so it must
+# list every state that should have a landing page + nav button + curated links).
+# Validated by `levels validate-dataset` (_check_region_yaml); build-side only (PHP
+# renders no per-state links). Values match the engine defaults, so the rendered
+# site is unchanged; declaring them here makes the dataset the source of truth so the
+# engine defaults can be genericized (S3i) without changing the WKCC site.
+default_weather_url: https://www.windy.com/?43.0,-118.0,6
+states:
+  California:
+    links:
+    - label: Dreamflows
+      url: https://www.dreamflows.com
+    - label: American Whitewater — California
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-CAL
+    - label: USGS California Water Data
+      url: https://waterdata.usgs.gov/state/california/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: California Nevada River Forecast Center
+      url: https://www.cnrfc.noaa.gov
+    - label: California Creeks
+      url: https://cacreeks.com
+    - label: Gold Country Paddlers
+      url: https://goldcountrypaddlers.org
+    - label: California Weather — Windy
+      url: https://www.windy.com/?37.2,-119.5,6
+    weather_url: https://www.windy.com/?37.2,-119.5,6
+  Idaho:
+    links:
+    - label: American Whitewater — Idaho
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-IDA
+    - label: Dreamflows — Idaho
+      url: https://www.dreamflows.com/flows.php?zone=panw&page=prod&form=norm&mark=All#Idaho_Rivers
+    - label: USGS Idaho Water Data
+      url: https://waterdata.usgs.gov/state/idaho/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: NW River Forecast Center
+      url: https://www.nwrfc.noaa.gov/rfc/
+    - label: USBR Hydromet
+      url: https://www.usbr.gov/pn/hydromet/datamenu.html
+    - label: Idaho Rivers United
+      url: https://www.idahorivers.org
+    - label: Idaho Whitewater Association
+      url: https://idahowhitewater.org
+    - label: Idaho Dept. of Water Resources
+      url: https://idwr.idaho.gov
+    - label: Idaho Weather — Windy
+      url: https://www.windy.com/?44.4,-114.7,7
+    weather_url: https://www.windy.com/?44.4,-114.7,7
+  Montana:
+    links:
+    - label: American Whitewater — Montana
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-MNT
+    - label: USGS Montana Water Data
+      url: https://waterdata.usgs.gov/state/montana/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: NW River Forecast Center
+      url: https://www.nwrfc.noaa.gov/rfc/
+    - label: Missouri Basin River Forecast Center
+      url: https://www.weather.gov/mbrfc/
+    - label: USBR Hydromet
+      url: https://www.usbr.gov/gp/hydromet/
+    - label: Montana Weather — Windy
+      url: https://www.windy.com/?46.9,-110.4,6
+    weather_url: https://www.windy.com/?46.9,-110.4,6
+  Nevada:
+    links:
+    - label: USGS Nevada Water Data
+      url: https://waterdata.usgs.gov/state/nevada/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: Colorado Basin River Forecast Center
+      url: https://www.cbrfc.noaa.gov
+    - label: American Whitewater — Nevada
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-NEV
+    - label: USBR Hydromet
+      url: https://www.usbr.gov/pn/hydromet/datamenu.html
+    - label: Nevada Weather — Windy
+      url: https://www.windy.com/?39.5,-116.9,7
+    weather_url: https://www.windy.com/?39.5,-116.9,7
+  Oregon:
+    links:
+    - label: American Whitewater — Oregon
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-ORE
+    - label: Dreamflows — Oregon Coastal
+      url: https://www.dreamflows.com/flows.php?zone=panw&page=prod&form=norm&mark=All#Oregon_Coastal_Rivers
+    - label: Dreamflows — Oregon Central
+      url: https://www.dreamflows.com/flows.php?zone=panw&page=prod&form=norm&mark=All#Oregon_Central_Rivers
+    - label: Dreamflows — Oregon Eastern
+      url: https://www.dreamflows.com/flows.php?zone=panw&page=prod&form=norm&mark=All#Oregon_Eastern_Rivers
+    - label: Oregon Kayaking
+      url: https://oregonkayaking.net
+    - label: USGS Oregon Water Data
+      url: https://waterdata.usgs.gov/state/oregon/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: NW River Forecast Center
+      url: https://www.nwrfc.noaa.gov/rfc/
+    - label: USBR Hydromet
+      url: https://www.usbr.gov/pn/hydromet/datamenu.html
+    - label: Willamette Kayak and Canoe Club
+      url: https://wkcc.org
+    - label: Oregon Whitewater Association
+      url: https://oregonwhitewater.org
+    - label: Oregon Weather — Windy
+      url: https://www.windy.com/?44.0,-120.5,7
+    - label: Oregon State Marine Board
+      url: https://www.oregon.gov/osmb/pages/index.aspx
+    - label: Oregon Waterway Access Permits
+      url: https://www.oregon.gov/osmb/boater-info/pages/ais-faqs.aspx
+    - label: Report a boating obstruction (Oregon SMB)
+      url: https://oregon-boating-obstructions-geo.hub.arcgis.com
+    weather_url: https://www.windy.com/?44.0,-120.5,7
+  Washington:
+    links:
+    - label: American Whitewater — Washington
+      url: https://www.americanwhitewater.org/content/River/view/river-index/state/USA-WSH
+    - label: Dreamflows — Washington
+      url: https://www.dreamflows.com/flows.php?zone=panw&page=prod&form=norm&mark=All#Washington_Rivers
+    - label: USGS Washington Water Data
+      url: https://waterdata.usgs.gov/state/washington/
+    - label: USGS StreamStats
+      url: https://streamstats.usgs.gov/ss/
+    - label: NW River Forecast Center
+      url: https://www.nwrfc.noaa.gov/rfc/
+    - label: USBR Hydromet
+      url: https://www.usbr.gov/pn/hydromet/datamenu.html
+    - label: Professor Paddle
+      url: https://www.professorpaddle.com
+    - label: Washington Weather — Windy
+      url: https://www.windy.com/?47.5,-120.5,7
+    - label: Washington Kayak Club
+      url: http://wakayakclub.clubexpress.com
+    weather_url: https://www.windy.com/?47.5,-120.5,7
