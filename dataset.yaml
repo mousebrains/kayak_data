@@ -5,13 +5,11 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S3c-D1) to the engine commit that adds
-# the dataset prose validator (validate-dataset's _check_site_prose + the build's
-# _deploy_site_prose render of site/*.md — kayak_python #161, S3c), so this repo's
-# CI validates an (opt-in) site/ prose dir and, for a publishable dataset, enforces
-# the legal trio (privacy, disclaimer, contact). The CI reads this pin from the BASE
-# commit (S4b-2 trust boundary): this is a pin-only change with no content edit, so
-# it is byte-clean under the prior engine and this PR's CI is green on the base
-# engine. Once merged, the content PR (S3c-D2, rebased) validates site/*.md under
-# this engine; the prior pin (2ae4c7f, S3b) has no site-prose check.
-engine_test_ref: "518048af65d26454c696d19021fd7ae7d9d18b15"
+# S7 formalizes per-release pinning. Bumped (S3d-D1) to the engine commit that adds
+# the dataset-owned map.yaml model, map config validation, build/fetch-osmb wiring,
+# stale-overlay cleanup, and reserved layer-key checks (kayak_python #163, S3d).
+# The CI reads this pin from the BASE commit (S4b-2 trust boundary): this is a
+# pin-only change with no content edit, so it is byte-clean under the prior engine.
+# Once merged, the content PR (S3d-D2) can add the current WKCC/Oregon map.yaml and
+# validate it under this engine.
+engine_test_ref: "2f57f714fd9bf3ce0a58ed63e42abb71e1d49522"
