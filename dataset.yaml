@@ -5,13 +5,13 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S3b-D1) to the engine commit that adds
-# the dataset region validator (kayak.dataset.region + validate-dataset's
-# _check_region_yaml, plus the state-name safety check _check_state_names —
-# kayak_python #159/#160, S3b), so this repo's CI enforces an (opt-in) region.yaml
-# and gates state.csv names. The CI reads this pin from the BASE commit (S4b-2 trust
-# boundary): this is a pin-only change with no content edit, so it is byte-clean
-# under the prior engine and this PR's CI is green on the base engine. Once merged,
-# the content PR (S3b-D2, rebased) validates region.yaml under this engine; the prior
-# pin (c335cb1, S3a) has no region check.
-engine_test_ref: "2ae4c7f4681496f74c351f08ccde6ec035d324a6"
+# S7 formalizes per-release pinning. Bumped (S3c-D1) to the engine commit that adds
+# the dataset prose validator (validate-dataset's _check_site_prose + the build's
+# _deploy_site_prose render of site/*.md — kayak_python #161, S3c), so this repo's
+# CI validates an (opt-in) site/ prose dir and, for a publishable dataset, enforces
+# the legal trio (privacy, disclaimer, contact). The CI reads this pin from the BASE
+# commit (S4b-2 trust boundary): this is a pin-only change with no content edit, so
+# it is byte-clean under the prior engine and this PR's CI is green on the base
+# engine. Once merged, the content PR (S3c-D2, rebased) validates site/*.md under
+# this engine; the prior pin (2ae4c7f, S3b) has no site-prose check.
+engine_test_ref: "518048af65d26454c696d19021fd7ae7d9d18b15"
