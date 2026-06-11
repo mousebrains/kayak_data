@@ -5,7 +5,7 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that derives
-# public data-license labels and JSON metadata from dataset.yaml while preserving
-# this dataset's CC BY-NC 4.0 live output (kayak_python #176).
-engine_test_ref: "5e5dedd783e971ec780185e2e1347d73f12ed9ef"
+# S7 formalizes per-release pinning. Bumped to the engine commit that loads
+# PHP gauge-picker/custom-gauge state labels from synced state rows while
+# preserving this dataset's current live labels (kayak_python #177).
+engine_test_ref: "e2c8f8f793f6483e8b124f502dba9f35fe00bdfa"
