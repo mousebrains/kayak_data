@@ -5,12 +5,11 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped (S3i-D3) to the engine commit that
-# removes WKCC site identity defaults from the engine after this dataset added
-# site.yaml (kayak_python #166, S3i generic site defaults).
+# S7 formalizes per-release pinning. Bumped (S3i-D4) to the engine commit that
+# reads LICENSE-DATA.txt from the dataset after this dataset added that file
+# (kayak_python #167, dataset-owned data license).
 # The CI reads this pin from the BASE commit (S4b-2 trust boundary): this is a
-# pin/comment-only change with no dataset content edit, so it is byte-clean under
-# the prior engine.
-# Once merged, later content PRs validate against the generic site-default
-# engine while WKCC site identity remains dataset-owned in site.yaml.
-engine_test_ref: "53731adb2de2b264cd66073bd7ab2364d2eeff3b"
+# pin-only change with no content edit, so it is byte-clean under the prior engine.
+# Once merged, later content PRs validate against the dataset-owned data-license
+# engine while WKCC data-license behavior remains dataset-owned in LICENSE-DATA.txt.
+engine_test_ref: "6641160553667007bf8f0f08dc88690342617138"
