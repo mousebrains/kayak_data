@@ -5,12 +5,10 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that
-# genericizes packaged PHP prose fallbacks while preserving WKCC production
-# prose from site/*.md (kayak_python #172, deploy output unchanged for this
-# dataset).
-# The CI reads this pin from the BASE commit (S4b-2 trust boundary): this is a
-# pin-only change with no content edit, so it is byte-clean under the prior engine.
-# Once merged, later data PRs validate against the engine whose packaged prose
-# fallbacks are generic and whose live WKCC output is dataset-owned.
-engine_test_ref: "9acc7519ea7090f9f1b95328b157611c94c6250a"
+# S7 formalizes per-release pinning. Bumped to the engine commit that validates
+# and installs dataset-owned site/assets over generic packaged public-identity
+# fallbacks (kayak_python #173).
+# The CI reads this pin from the BASE commit (S4b-2 trust boundary), so this
+# change remains compatible with the prior engine: the asset README is metadata
+# only, and the asset files already existed on main.
+engine_test_ref: "5df1ef48d6efff22f7f5ba51030f4f539bd86919"
