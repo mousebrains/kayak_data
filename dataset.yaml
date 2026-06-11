@@ -5,10 +5,10 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that requires
-# publishable datasets to carry their legal/contact site prose and removes the
-# hardcoded Oregon reach-picker default (kayak_python #174).
-# The CI reads this pin from the BASE commit (S4b-2 trust boundary), so this
-# pin-only change remains compatible with the prior engine: the required
-# site/*.md prose files already existed on main.
-engine_test_ref: "e8e5e6b46edb71f6614f96b7d8f6de8d4127b3e8"
+# S7 formalizes per-release pinning. Bumped to the engine commit that gives the
+# engine a generic SITE_URL fallback while requiring publishable deploys to set
+# SITE_URL explicitly (kayak_python #175).
+# The CI reads this pin from the BASE commit (S4b-2 trust boundary), so the
+# accompanying workflow SITE_URL env remains compatible with the prior engine
+# while keeping post-merge main validation green under this pin.
+engine_test_ref: "92efaaeed1eda29e2fbdd1fbd6b4f5a85e7c7951"
