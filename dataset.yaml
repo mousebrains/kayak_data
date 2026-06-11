@@ -6,10 +6,10 @@ status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
 # S7 formalizes per-release pinning. Bumped to the engine commit that renders
-# manifest.json display identity from site.yaml (kayak_python #169), making
-# WKCC's live PWA name "WKCC River Levels" while short_name remains "Levels".
+# security.txt Contact and Expires from site.yaml when present
+# (kayak_python #170, deploy output unchanged until this dataset opts in).
 # The CI reads this pin from the BASE commit (S4b-2 trust boundary): this is a
 # pin-only change with no content edit, so it is byte-clean under the prior engine.
-# Once merged, later content PRs validate against the manifest-identity engine
-# while robots.txt output remains controlled by SITE_URL.
-engine_test_ref: "f7b3524c2bb44487ab258a21460d663c70add969"
+# Once merged, later content PRs can add security_contact/security_expires to
+# site.yaml and validate against the trusted security.txt renderer.
+engine_test_ref: "d4a24f1084e1aa32b8a73a9f82393b06c1b8bb8b"
