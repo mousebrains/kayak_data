@@ -95,6 +95,7 @@ jobs:
           DATABASE_URL: sqlite:///${{ runner.temp }}/k.db
           DATASET_DIR: ${{ github.workspace }}
           OUTPUT_DIR: ${{ runner.temp }}/out
+          SITE_URL: https://levels.wkcc.org
         run: |
           L=engine/.venv/bin/levels
           "$L" init-db --no-seed
