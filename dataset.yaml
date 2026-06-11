@@ -6,10 +6,10 @@ status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
 # S7 formalizes per-release pinning. Bumped to the engine commit that renders
-# robots.txt's sitemap URL from SITE_URL instead of a packaged WKCC host
-# (kayak_python #168, deploy output unchanged on the live SITE_URL).
+# manifest.json display identity from site.yaml (kayak_python #169), making
+# WKCC's live PWA name "WKCC River Levels" while short_name remains "Levels".
 # The CI reads this pin from the BASE commit (S4b-2 trust boundary): this is a
 # pin-only change with no content edit, so it is byte-clean under the prior engine.
-# Once merged, later content PRs validate against the robots-template engine
-# while WKCC's live robots.txt output remains controlled by SITE_URL.
-engine_test_ref: "859288a7ac8845ad9c53fdf0e4de5a4eb54efc91"
+# Once merged, later content PRs validate against the manifest-identity engine
+# while robots.txt output remains controlled by SITE_URL.
+engine_test_ref: "f7b3524c2bb44487ab258a21460d663c70add969"
