@@ -59,14 +59,95 @@ jobs:
             echo "::error::could not read a 40-hex engine_test_ref from $BASE_SHA:dataset.yaml"
             exit 1
           fi
-          echo "ref=$REF" >> "$GITHUB_OUTPUT"
-          echo "Validating against engine $REF (trusted base pin)"
+          CANDIDATE=$(sed -nE 's/^engine_test_ref:[[:space:]]*"?([0-9a-f]{40})"?.*/\1/p' dataset.yaml)
+          if [ -z "$CANDIDATE" ]; then
+            echo "::error::could not read a 40-hex engine_test_ref from the PR dataset.yaml"
+            exit 1
+          fi
+          echo "trusted_ref=$REF" >> "$GITHUB_OUTPUT"
+          echo "candidate_ref=$CANDIDATE" >> "$GITHUB_OUTPUT"
+          echo "Trusted base engine pin: $REF"
+          echo "Candidate engine pin: $CANDIDATE"
+
+      - name: Enforce pin-only engine bump discipline
+        id: pin_policy
+        env:
+          EVENT_NAME: ${{ github.event_name }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.sha }}
+          TRUSTED_REF: ${{ steps.pin.outputs.trusted_ref }}
+          CANDIDATE_REF: ${{ steps.pin.outputs.candidate_ref }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import pathlib
+          import subprocess
+          import sys
+
+          event_name = os.environ["EVENT_NAME"]
+          base_sha = os.environ["BASE_SHA"]
+          trusted_ref = os.environ["TRUSTED_REF"]
+          candidate_ref = os.environ["CANDIDATE_REF"]
+          validation_ref = trusted_ref
+
+          def dataset_yaml_at(ref: str) -> dict[str, str]:
+              text = subprocess.check_output(
+                  ["git", "show", f"{ref}:dataset.yaml"],
+                  text=True,
+              )
+              return parse_dataset_yaml(text)
+
+          def parse_dataset_yaml(text: str) -> dict[str, str]:
+              data: dict[str, str] = {}
+              for line in text.splitlines():
+                  stripped = line.strip()
+                  if not stripped or stripped.startswith("#") or ":" not in stripped:
+                      continue
+                  key, value = stripped.split(":", 1)
+                  data[key.strip()] = value.strip().strip("\"'")
+              return data
+
+          if event_name == "pull_request" and candidate_ref != trusted_ref:
+              changed = subprocess.check_output(
+                  ["git", "diff", "--name-only", f"{base_sha}...HEAD"],
+                  text=True,
+              ).splitlines()
+              extra = [path for path in changed if path != "dataset.yaml"]
+              if extra:
+                  print(
+                      "::error::engine_test_ref changes must be pin-only. "
+                      "Move these data/workflow changes to a follow-up PR: "
+                      + ", ".join(extra)
+                  )
+                  sys.exit(1)
+
+              base_meta = dataset_yaml_at(base_sha)
+              head_meta = parse_dataset_yaml(pathlib.Path("dataset.yaml").read_text())
+              base_meta.pop("engine_test_ref", None)
+              head_meta.pop("engine_test_ref", None)
+              if head_meta != base_meta:
+                  print(
+                      "::error::engine_test_ref changes may only alter the pin "
+                      "and comments in dataset.yaml"
+                  )
+                  sys.exit(1)
+
+              validation_ref = candidate_ref
+              print(
+                  "Pin-only PR detected; validating unchanged dataset against "
+                  f"candidate engine {candidate_ref}"
+              )
+          else:
+              print(f"Validating against trusted engine {trusted_ref}")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a", encoding="utf-8") as out:
+              out.write(f"validation_ref={validation_ref}\n")
+          PY
 
       - name: Checkout engine at the pinned commit (read-only deploy key)
         uses: actions/checkout@v6
         with:
           repository: mousebrains/kayak_python
-          ref: ${{ steps.pin.outputs.ref }}
+          ref: ${{ steps.pin_policy.outputs.validation_ref }}
           ssh-key: ${{ secrets.KAYAK_ENGINE_DEPLOY_KEY }}
           path: engine
 
