@@ -19,7 +19,7 @@ Active gauge definition (is_active=1): at least one parameter in the inventory
 has an end year >= current year - 1 (e.g., during 2026 we accept 2025 or 2026).
 
 Run:
-    python scripts/fetch_usbr_pn_sites.py [path/to/gauges.db]
+    python ops/fetch_usbr_pn_sites.py [path/to/gauges.db]
 """
 
 from __future__ import annotations

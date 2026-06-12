@@ -22,7 +22,7 @@ Notes on "active":
     station lists for true PNW activity status.
 
 Run:
-    python scripts/fetch_usbr_rise_sites.py [path/to/gauges.db]
+    python ops/fetch_usbr_rise_sites.py [path/to/gauges.db]
 """
 
 import re

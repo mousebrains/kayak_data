@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# scripts/audit-t30.sh
+# ops/audit-t30.sh (kayak_data; formerly the engine's scripts/audit-t30.sh)
 #
 # Read-only deep audit dump for the T0..T+30 review window (DNS cutover
 # 2026-05-20 → stabilization through ~2026-06-19). Builds on the
@@ -15,8 +15,8 @@
 # Nothing changes state — diffs are read-only, journalctl is
 # `--no-pager -n N`, no `apt update`.
 #
-# Usage:  bash scripts/audit-t30.sh
-#         or  ./scripts/audit-t30.sh
+# Usage:  bash ops/audit-t30.sh
+#         or  ./ops/audit-t30.sh
 
 set -uo pipefail
 
