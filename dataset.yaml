@@ -5,6 +5,7 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that renders
-# visible static/PHP site titles from dataset site identity (kayak_python #185).
-engine_test_ref: "1546afb1d907fe9bcbcb7f3b9edf0c4af6fbae10"
+# S7 formalizes per-release pinning. Bumped to the engine's finishing-plan
+# Batch 2 merge (kayak_python #187): ops-input moves (S3g/D3), required
+# OUTPUT_DIR + output guard (S3h), nav_title support, toolchain bumps.
+engine_test_ref: "45f41def88f1682e51bf0f0abc1ae7dc8c0ba5b6"
