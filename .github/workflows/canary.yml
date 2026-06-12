@@ -1,0 +1,70 @@
+name: canary
+
+# S4b: scheduled, NON-REQUIRED canary validating this dataset against the
+# engine's CURRENT `main` — early warning that an engine change will break the
+# next pin bump, without making ordinary data PRs nondeterministic (their
+# required gate is validate.yml, pinned to the BASE commit's engine_test_ref).
+#
+# A red canary means: fix the engine, or prepare the dataset change to pair
+# with the next pin-only bump. It must never be made a required check.
+
+on:
+  schedule:
+    - cron: "17 13 * * 1" # weekly, Monday 13:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: canary
+  cancel-in-progress: true
+
+jobs:
+  canary:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - name: Checkout dataset (main)
+        uses: actions/checkout@v6
+
+      - name: Checkout engine at main (read-only deploy key)
+        uses: actions/checkout@v6
+        with:
+          repository: mousebrains/kayak_python
+          ref: main
+          ssh-key: ${{ secrets.KAYAK_ENGINE_DEPLOY_KEY }}
+          path: engine
+
+      - uses: astral-sh/setup-uv@08807647e7069bb48b6ef5acd8ec9567f424441b # v8.1.0
+        with:
+          enable-cache: true
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Install engine (base deps, hash-locked)
+        working-directory: engine
+        run: uv sync --locked
+
+      - name: validate-dataset against engine main
+        run: engine/.venv/bin/levels validate-dataset "$GITHUB_WORKSPACE"
+
+      - name: generate-sources --check (registry vs committed CSVs)
+        run: engine/.venv/bin/levels generate-sources "$GITHUB_WORKSPACE" --check
+
+      # --no-seed is a deprecated no-op on current engine main (S1-cleanup made
+      # init-db schema-only) but keeps this step working against any main from
+      # before that change; drop the flag when the engine removes it (Batch 6).
+      - name: sync + build smoke (clean apply, idempotent no-op, build)
+        env:
+          DATABASE_URL: sqlite:///${{ runner.temp }}/k.db
+          DATASET_DIR: ${{ github.workspace }}
+          OUTPUT_DIR: ${{ runner.temp }}/out
+          SITE_URL: https://levels.wkcc.org
+        run: |
+          L=engine/.venv/bin/levels
+          "$L" init-db --no-seed
+          "$L" sync-metadata
+          "$L" sync-metadata
+          "$L" build
