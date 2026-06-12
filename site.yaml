@@ -15,3 +15,8 @@ brand_color_dark: "#0d3057"
 attribution: levels.wkcc.org
 security_contact: mailto:pat.kayak@gmail.com
 security_expires: "2027-05-20T00:00:00Z"
+
+# Compact stacked header brand (1-2 lines, rendered <br>-joined in the nav
+# h1 like the Reach/Picker buttons); the full site_name stays in og:site_name,
+# page titles, and the manifest. Engine renders site_name when unset.
+nav_title: ["River", "Levels"]
