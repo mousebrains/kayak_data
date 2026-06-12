@@ -11,7 +11,7 @@ geometry tools stay engine-side.
 | File | Purpose |
 |---|---|
 | `audit_ignore.yaml` | Suppressions for the engine's `scripts/audit_gauges.py` — read automatically from `DATASET_DIR/ops/audit_ignore.yaml` (schema documented in-file) |
-| `fetch_nhd.sh` | Download the OR/WA/ID/NV/CA NHD state GPKGs + NHDPlus HR HUC4s; **destination is a required argument** — pass the engine checkout's `Trace-cache/NHD/` (the engine's `extract_*.sh` scripts read it there) |
+| `nhd_downloads.txt` | The regional NHD download list (OR/WA/ID/NV/CA state GPKGs + PNW/MT HUC4s) consumed by the **engine's** `scripts/fetch_nhd.sh` — the generic downloader stays engine-side; only the list is dataset content |
 | `harvest_wa_ecology.py` | Harvest WA Ecology flow-station metadata into the gauge-metadata cache |
 | `fetch_usbr_pn_sites.py` | USBR Pacific-Northwest (hydromet) site catalog → gauge-metadata cache |
 | `fetch_usbr_rise_sites.py` | USBR RISE site catalog (PNW cross-referencing) → gauge-metadata cache |
