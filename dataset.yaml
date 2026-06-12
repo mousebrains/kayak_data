@@ -5,7 +5,7 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that adds the
-# generic map-layer fetch alias and MAP_LAYERS_DIR compatibility path
-# (kayak_python #180).
-engine_test_ref: "13c3361432874b6ce72f58084a3a40124ce5e15d"
+# S7 formalizes per-release pinning. Bumped to the engine commit that
+# genericizes map-overlay terminology while preserving live compatibility names
+# (kayak_python #181).
+engine_test_ref: "a42c3eab35295beb378e0e4ce8d14c5dd3813aa3"
