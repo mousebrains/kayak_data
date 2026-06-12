@@ -5,13 +5,16 @@
 # Run on a machine with sufficient RAM and disk (files are ~200MB-1GB each).
 #
 # Usage:
-#   bash scripts/fetch_nhd.sh [DEST_DIR]
+#   bash ops/fetch_nhd.sh /path/to/<engine-checkout>/Trace-cache/NHD
 #
-# Default destination: ./Trace-cache/NHD/
+# DEST is REQUIRED and must be the ENGINE checkout's Trace-cache/NHD — the
+# engine's extract_*.sh scripts read it there. (The old engine-relative
+# default changed meaning when this script moved to kayak_data/ops, and a
+# wrong default here means re-downloading many GB; PR #54 review.)
 
 set -euo pipefail
 
-DEST="${1:-$(dirname "$0")/../Trace-cache/NHD}"
+DEST="${1:?Usage: bash ops/fetch_nhd.sh /path/to/<engine-checkout>/Trace-cache/NHD (destination is required; the engine extract_*.sh scripts read it there)}"
 mkdir -p "$DEST/state" "$DEST/hr"
 
 S3="https://prd-tnm.s3.amazonaws.com/StagedProducts"
