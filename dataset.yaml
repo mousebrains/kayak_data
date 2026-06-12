@@ -6,6 +6,6 @@ status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
 # S7 formalizes per-release pinning. Bumped to the engine commit that adds the
-# guidebook.short_label dataset contract and reach-search runtime consumer
-# (kayak_python #179).
-engine_test_ref: "ac3fe6a83763484209154f960930a2d18d8becbe"
+# generic map-layer fetch alias and MAP_LAYERS_DIR compatibility path
+# (kayak_python #180).
+engine_test_ref: "13c3361432874b6ce72f58084a3a40124ce5e15d"
