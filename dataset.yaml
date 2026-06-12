@@ -5,7 +5,7 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine commit that makes the
-# gauge metadata cache path configurable while preserving the live default
-# (kayak_python #182).
-engine_test_ref: "892c2a7d913d9f84b14f407449d6c5a7ad61852f"
+# S7 formalizes per-release pinning. Bumped to the engine commit that shares the
+# gauge metadata cache default across maintenance scripts while preserving the
+# live default (kayak_python #183).
+engine_test_ref: "3d1796a2899261777a101392502a499336b4c914"
