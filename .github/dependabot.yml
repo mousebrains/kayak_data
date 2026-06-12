@@ -1,0 +1,17 @@
+# Dependabot — keep the SHA-pinned actions in validate.yml / canary.yml from
+# going silently stale (engine-repo parity; monthly + grouped to keep noise
+# low). NOTE: Dependabot-triggered runs read the DEPENDABOT secret store, not
+# Actions secrets — KAYAK_ENGINE_DEPLOY_KEY is duplicated there (a dedicated
+# read-only deploy key, kayak_data-dependabot-read on kayak_python), or the
+# required validate check would fail on the engine checkout for every
+# Dependabot PR (same incident the engine repo hit on 2026-06-08).
+version: 2
+updates:
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: monthly
+    groups:
+      actions:
+        patterns: ["*"]
+    open-pull-requests-limit: 3

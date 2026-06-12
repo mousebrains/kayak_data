@@ -1,0 +1,39 @@
+# WKCC regional NHD download list — consumed by the ENGINE's
+# scripts/fetch_nhd.sh (the generic downloader stays engine-side; which
+# states/HUC4s to fetch is this deployment's regional knowledge, S3g/G5).
+#
+#   bash <engine>/scripts/fetch_nhd.sh /path/to/this/file
+#
+# Format: `state <GPKG zip name>` (NHD medium-res state GeoPackage) or
+# `huc4 <code>` (NHDPlus HR HUC4 GDB). '#' starts a comment.
+
+# --- Medium resolution: full state GeoPackages ---
+state NHD_H_Oregon_State_GPKG.zip
+state NHD_H_Washington_State_GPKG.zip
+state NHD_H_Idaho_State_GPKG.zip
+state NHD_H_Nevada_State_GPKG.zip
+state NHD_H_California_State_GPKG.zip
+
+# --- High resolution: NHDPlus HR by HUC4 ---
+# OR, WA, ID, NV, and northern CA (north of 40°), plus MT headwaters:
+huc4 1701  # Pacific Northwest (WA/OR coast)
+huc4 1702  # Willamette
+huc4 1703  # Lower Columbia
+huc4 1704  # Upper Columbia (WA)
+huc4 1705  # Middle Columbia (OR/WA)
+huc4 1706  # Central Oregon
+huc4 1707  # Middle Snake (ID/OR)
+huc4 1708  # Upper Snake (ID)
+huc4 1709  # Closed basins (NV/OR)
+huc4 1710  # Oregon closed basins
+huc4 1711  # Puget Sound (WA)
+huc4 1712  # WA coast
+huc4 1601  # Great Basin (NV)
+huc4 1602  # Great Basin (NV)
+huc4 1603  # Great Basin (NV)
+huc4 1604  # Humboldt (NV)
+huc4 1801  # Klamath-Trinity-Smith (NorCal)
+huc4 1802  # Klamath (OR/CA)
+huc4 1803  # NorCal (north of 40°)
+huc4 1002  # Missouri Headwaters (MT: Big Hole, Jefferson, Madison)
+huc4 1003  # Missouri-Marias (MT: Missouri, Dearborn, Smith, Sun, Belt Creek)
