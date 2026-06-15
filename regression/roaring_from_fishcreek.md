@@ -1,16 +1,19 @@
 # Surrogate: Roaring River ← Fish Creek (drainage-area scaling)
 
-**Status:** analysis complete; `calc_expression` + virtual-gauge deployment
-**pending**. Orphan report (non-fatal `validate-dataset` warning) until wired up.
-Companion to [`fishcreek_14209700_stage_rating.md`](fishcreek_14209700_stage_rating.md),
+**Status:** **deployed** — `calc_expression` id 25
+(`provenance_slug = roaring_from_fishcreek`) on the virtual gauge `Roaring_FishCreek_calc`
+(id 234) reads it, and reach 188 is re-pointed off the Oak Grove Fork stand-in to gauge
+234. Companion to [`fishcreek_14209700_stage_rating.md`](fishcreek_14209700_stage_rating.md),
 which supplies the Fish Creek flow this surrogate scales.
 
 **Goal:** The Roaring River (reach `32` / id 188, class IV, Clackamas basin) has no
-live gauge. It currently borrows **gauge 159 = Oak Grove Fork at Ripplebrook (USGS
+live gauge. It previously borrowed **gauge 159 = Oak Grove Fork at Ripplebrook (USGS
 14209250)**, which is **dam-regulated** (PGE's Harriet Lake / Oak Grove project) and a
 poor analog for the free-flowing Roaring. Boaters have long used **Fish Creek** as the
-Roaring surrogate (adjacent, free-flowing, near-identical size). Formalize that: build
-a virtual Roaring gauge as a scaled multiple of Fish Creek's (calc-derived) flow.
+Roaring surrogate (adjacent, free-flowing, near-identical size). This formalizes that: a
+virtual Roaring gauge = a scaled multiple of Fish Creek's (calc-derived) flow.
+
+![Roaring ≈ 0.95 × Fish Creek](./roaring_from_fishcreek.svg)
 
 ## The surrogate
 

@@ -38,9 +38,6 @@ each report for the full fit, diagnostics, and the deployed `calc_expression`.
 
 ### Clackamas basin (Oregon)
 
-_Analysis complete; `calc_expression` deployment pending — these are orphan reports
-(non-fatal `validate-dataset` warning) until the calcs are wired up._
-
 - [`fishcreek_14209700_stage_rating.md`](fishcreek_14209700_stage_rating.md)
   — Fish Creek nr Three Lynx (USGS 14209700): same-gauge stage→discharge rating
   `Q = 6.192·(h−2.45)^3.288` (discharge ended 2024-11-27; USGS retired the rating).

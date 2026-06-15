@@ -230,3 +230,4 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 231,Kalama_ItalianCreek_calc,,,Below Italian Cr nr Kalama (estimated),46.044836,-122.815384,,,,,,,,,20.0,198.0,170800030305,0,Kalama,Kalama below Italian Cr (calc),kalama|9|009980|000198,WA
 232,Coweeman_Kelso_calc,,,Near Kelso (estimated),46.128169,-122.838443,,,,,,,,,30.0,119.0,170800050804,0,Coweeman,Coweeman nr Kelso (calc),coweeman|9|009970|000119,WA
 233,Green_Toutle_calc,,,Above Beaver Cr nr Kid Valley (estimated),46.381775,-122.52372,,,,,,,,,845.8,129.0,170800050404,0,Green (Toutle),Green (Toutle) above Beaver Cr (calc),green (toutle)|9|009154|000129,WA
+234,Roaring_FishCreek_calc,,,nr Estacada (estimated from Fish Creek),45.159565,-122.115081,,,,,,,,,,42.4,170900110402,0,Roaring,Roaring nr Estacada (calc),roaring|9|008590|000042,OR
