@@ -1,9 +1,9 @@
 # Stage→discharge rating: Fish Creek nr Three Lynx (USGS 14209700)
 
-**Status:** analysis complete; `calc_expression` deployment **pending**. This report
-is an *orphan* (no `provenance_slug` references it yet) — that is a known non-fatal
-`validate-dataset` warning until the Fish Creek flow calc is added. Supersedes an
-earlier field-measurement-only fit (see *Superseded fits*).
+**Status:** **deployed** — `calc_expression` id 24
+(`provenance_slug = fishcreek_14209700_stage_rating`) on gauge 34 reads this rating, so
+this report is referenced (not an orphan). Supersedes an earlier field-measurement-only
+fit (see *Superseded fits*).
 
 **Goal:** Fish Creek's USGS gauge (`14209700`, on reach `3f` / id 201) reports **gage
 height only** — USGS stopped publishing discharge after 2024-11-27 and retired the
@@ -11,11 +11,12 @@ rating (stage feed flagged ~2026-01-23). Reconstruct a stage→discharge rating 
 `calc_expression` can turn the live stage into CFS (and feed the Roaring surrogate —
 see [`roaring_from_fishcreek.md`](roaring_from_fishcreek.md)).
 
+![Fish Creek 14209700 stage–discharge rating](./fishcreek_14209700_stage_rating.svg)
+
 This is **not** the standard `gauge_pair_linear.py` regression (estimate one gauge
 from others); it is a same-gauge rating curve fit to the gauge's own paired
-stage+discharge record. Done as ad-hoc analysis (USGS APIs); the script-generated
-`.svg`/`.json` sidecars are not produced — generate them before wiring a calc to this
-slug, or the deploy validator will require them.
+stage+discharge record, done as ad-hoc analysis (USGS APIs). The `.svg`/`.json`
+sidecars are hand-generated (not the `gauge_pair_linear.py` pipeline).
 
 ## The rating
 
@@ -115,8 +116,11 @@ generate-sources`, add the `calc_expression.csv` row (stable id from
 `fetch-usgs-ogc` fetches `00060/00065/00010` for **any** USGS source, keyed on the
 source row, not on a flag. Source 166 (`14209700`, agency USGS) already exists, so the
 **moment USGS republishes `00060`, fetch will auto-ingest real Fish Creek flow** onto
-gauge 34 — alongside the calc flow. Gauge 34 would then carry **two** flow values
-(real + rating-derived), and which wins the gauge-level "latest flow" is undefined.
+gauge 34 — alongside the calc flow. Gauge 34 would then carry **two** flow sources, and
+the gauge-level latest (`db/cache.py`) picks the **most recent observation, ties broken
+by highest `source_id`** — *not* a MAX. Because the calc runs after fetch (and has the
+higher source_id), **the calc would mask the real USGS flow**, so it must be retired —
+it can't just coexist.
 
 **Action when that happens:** retire the Fish Creek flow calc — remove its
 `sources.yaml` entry, `generate-sources`, `sync-metadata --allow-deletes`. Gauge 34

@@ -327,3 +327,5 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 354,Kalama_ItalianCreek_calc,Calculation,,21,
 355,Coweeman_Kelso_calc,Calculation,,22,
 356,Green_Toutle_calc,Calculation,,23,
+357,FishCreek_14209700_rating_calc,Calculation,,24,
+358,Roaring_FishCreek_calc,Calculation,,25,

@@ -1,0 +1,35 @@
+{
+  "slug": "fishcreek_14209700_stage_rating",
+  "type": "stage_discharge_rating",
+  "target": "14209700",
+  "form": "Q = C*(h-h0)^b",
+  "coefs": [
+    {
+      "name": "C",
+      "value": 6.192
+    },
+    {
+      "name": "h0",
+      "value": 2.45
+    },
+    {
+      "name": "b",
+      "value": 3.288
+    }
+  ],
+  "n": 119623,
+  "window": [
+    "2021-06-09",
+    "2024-11-27"
+  ],
+  "r2_loglog": 0.998,
+  "rel_rmse_pct": 5.9,
+  "validation": {
+    "recent_gaugings_bias_pct": -1.0,
+    "recent_gaugings_n": 19,
+    "confluence_bracket_pct": "3-4",
+    "three_lynx": "no shift across 2026-01-23"
+  },
+  "drift_ft_per_yr_midflow": 0.05,
+  "note": "discharge ends 2024-11-27; rating from continuous paired record. See fishcreek_14209700_stage_rating.md"
+}

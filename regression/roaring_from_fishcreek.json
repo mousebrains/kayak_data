@@ -1,0 +1,17 @@
+{
+  "slug": "roaring_from_fishcreek",
+  "type": "drainage_area_surrogate",
+  "target": "14209600",
+  "source": "14209700",
+  "coefs": [
+    {
+      "name": "factor",
+      "value": 0.95
+    }
+  ],
+  "basis": {
+    "da_ratio": 0.94,
+    "boating_season_bridge": 0.97
+  },
+  "note": "Roaring (DA 42.4) ~= 0.95 * Fish Creek (DA 45.1). No direct regression (1966-68 record no overlap). See roaring_from_fishcreek.md"
+}

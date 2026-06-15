@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 430" font-family="sans-serif">
+<title>Roaring = 0.95 x Fish Creek</title>
+<rect x="0" y="0" width="640" height="430" fill="#ffffff"/>
+<line x1="70" y1="380" x2="620" y2="380" stroke="#333" stroke-width="1"/>
+<line x1="70" y1="40" x2="70" y2="380" stroke="#333" stroke-width="1"/>
+<line x1="70.0" y1="380" x2="70.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="70.0" y="398" font-size="11" text-anchor="middle" fill="#333">0</text>
+<line x1="65" y1="380.0" x2="70" y2="380.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="384.0" font-size="11" text-anchor="end" fill="#333">0</text>
+<line x1="180.0" y1="380" x2="180.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="180.0" y="398" font-size="11" text-anchor="middle" fill="#333">200</text>
+<line x1="65" y1="312.0" x2="70" y2="312.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="316.0" font-size="11" text-anchor="end" fill="#333">200</text>
+<line x1="290.0" y1="380" x2="290.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="290.0" y="398" font-size="11" text-anchor="middle" fill="#333">400</text>
+<line x1="65" y1="244.0" x2="70" y2="244.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="248.0" font-size="11" text-anchor="end" fill="#333">400</text>
+<line x1="400.0" y1="380" x2="400.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="400.0" y="398" font-size="11" text-anchor="middle" fill="#333">600</text>
+<line x1="65" y1="176.0" x2="70" y2="176.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="180.0" font-size="11" text-anchor="end" fill="#333">600</text>
+<line x1="510.0" y1="380" x2="510.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="510.0" y="398" font-size="11" text-anchor="middle" fill="#333">800</text>
+<line x1="65" y1="108.0" x2="70" y2="108.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="112.0" font-size="11" text-anchor="end" fill="#333">800</text>
+<line x1="620.0" y1="380" x2="620.0" y2="385" stroke="#333" stroke-width="1"/>
+<text x="620.0" y="398" font-size="11" text-anchor="middle" fill="#333">1000</text>
+<line x1="65" y1="40.0" x2="70" y2="40.0" stroke="#333" stroke-width="1"/>
+<text x="62" y="44.0" font-size="11" text-anchor="end" fill="#333">1000</text>
+<text x="345" y="412" font-size="13" text-anchor="middle" fill="#333">Fish Creek flow (cfs)</text>
+<text x="20" y="210" font-size="13" text-anchor="middle" fill="#333" transform="rotate(-90 20 210)">Roaring flow (cfs)</text>
+<text x="345" y="22" font-size="13" text-anchor="middle" fill="#333">Roaring = 0.95 x Fish Creek (DA 0.94 / boating bridge 0.97)</text>
+<polyline points="70.0,380.0 620.0,57.0" fill="none" stroke="#0a7" stroke-width="2"/>
+<circle cx="143.7" cy="336.7" r="3" fill="#06c"/>
+<circle cx="289.5" cy="251.1" r="3" fill="#06c"/>
+<circle cx="566.7" cy="88.3" r="3" fill="#06c"/>
+</svg>

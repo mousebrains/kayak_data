@@ -1933,3 +1933,13 @@ sources:
   agency: Calculation
   gauge_id: 233
   calc_expression_id: 23
+- id: 357
+  name: FishCreek_14209700_rating_calc
+  agency: Calculation
+  gauge_id: 34
+  calc_expression_id: 24
+- id: 358
+  name: Roaring_FishCreek_calc
+  agency: Calculation
+  gauge_id: 234
+  calc_expression_id: 25
