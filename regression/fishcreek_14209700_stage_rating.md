@@ -116,8 +116,11 @@ generate-sources`, add the `calc_expression.csv` row (stable id from
 `fetch-usgs-ogc` fetches `00060/00065/00010` for **any** USGS source, keyed on the
 source row, not on a flag. Source 166 (`14209700`, agency USGS) already exists, so the
 **moment USGS republishes `00060`, fetch will auto-ingest real Fish Creek flow** onto
-gauge 34 — alongside the calc flow. Gauge 34 would then carry **two** flow values
-(real + rating-derived), and which wins the gauge-level "latest flow" is undefined.
+gauge 34 — alongside the calc flow. Gauge 34 would then carry **two** flow sources, and
+the gauge-level latest (`db/cache.py`) picks the **most recent observation, ties broken
+by highest `source_id`** — *not* a MAX. Because the calc runs after fetch (and has the
+higher source_id), **the calc would mask the real USGS flow**, so it must be retired —
+it can't just coexist.
 
 **Action when that happens:** retire the Fish Creek flow calc — remove its
 `sources.yaml` entry, `generate-sources`, `sync-metadata --allow-deletes`. Gauge 34
