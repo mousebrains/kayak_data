@@ -131,7 +131,7 @@ id,reach_id,name,low,low_data_type,high,high_data_type
 130,183,II-IV+(V),500.0,flow,5000.0,flow
 131,184,II(III),900.0,flow,3000.0,flow
 132,187,I-III,400.0,flow,1600.0,flow
-133,188,IV,2000.0,flow,6000.0,flow
+133,188,IV,300.0,flow,750.0,flow
 134,189,V,1600.0,flow,10000.0,flow
 135,190,I-IV,500.0,flow,1500.0,flow
 136,192,II-IV,1600.0,flow,31000.0,flow
