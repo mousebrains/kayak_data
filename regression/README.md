@@ -36,6 +36,22 @@ each report for the full fit, diagnostics, and the deployed `calc_expression`.
   — Salmon Cr nr Oakridge (retired USGS 14146500) ← NFMF Willamette 14147500
   (linear, r²=0.952). Lead/lag: [`salmon_14146500_leadlag.md`](salmon_14146500_leadlag.md).
 
+### Clackamas basin (Oregon)
+
+_Analysis complete; `calc_expression` deployment pending — these are orphan reports
+(non-fatal `validate-dataset` warning) until the calcs are wired up._
+
+- [`fishcreek_14209700_stage_rating.md`](fishcreek_14209700_stage_rating.md)
+  — Fish Creek nr Three Lynx (USGS 14209700): same-gauge stage→discharge rating
+  `Q = 6.192·(h−2.45)^3.288` (discharge ended 2024-11-27; USGS retired the rating).
+  Continuous-record fit, log-log r²=0.998; validated by recent gaugings (−1% bias),
+  the 1999 confluence bracket, and a live Three Lynx cross-check.
+- [`roaring_from_fishcreek.md`](roaring_from_fishcreek.md)
+  — Roaring River (reach 32; historical USGS 14209600) ← **0.95 × Fish Creek**
+  drainage-area surrogate (DA 0.94 / boating-season bridge 0.97), replacing the
+  dam-regulated Oak Grove Fork stand-in. No direct regression (Roaring's 1966–68
+  record doesn't overlap Fish Creek).
+
 ### Rogue (Oregon)
 
 - [`rogue_14328000_from_14330000.md`](rogue_14328000_from_14330000.md)
