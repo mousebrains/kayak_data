@@ -180,7 +180,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 179,SALMON RIVER NR SHOUP ID,,,Shoup,45.3225,-114.44,,,,,,,13307000,,3157.6,6239.0,170602031302,0,Salmon,Salmon at Shoup,salmon|9|006842|006239,ID
 180,EFSF_Stibnite,,,Stibnite,44.905722,-115.3295,,SFSI,,,SFSI1,,13311000,,6466.0,19.3,170602080201,0,East Fork South Fork Salmon,East Fork South Fork Salmon at Stibnite,salmon|0east|003534|000019,ID
 181,EFSF_Salmon_calc,,,EFSF just below Johnson Cr confluence (calc),44.962554,-115.505507,,,,,,,,,4632.4,,170602080302,0,Salmon,Salmon at EFSF just below Johnson Cr confluence (calc),salmon|9|005368|999999,ID
-182,LWWW1,,,Willard Nat'l Fish Hatchery near Mill A,45.7648,-121.6303,,LWWW,,,LWWW1,,,,925.0,,170701050905,0,Little White Salmon,Little White Salmon at Willard Nat'l Fish Hatchery near Mill A,little white salmon|9|009075|999999,WA
+182,LWWW1,,,Willard Nat'l Fish Hatchery near Mill A,45.7648,-121.6303,,LWWW,,,LWWW1,,14124500,,925.0,,170701050905,0,Little White Salmon,Little White Salmon at Willard Nat'l Fish Hatchery near Mill A,little white salmon|9|009075|999999,WA
 183,14128500,,,Carson,45.726747,-121.794775,,WCNW,,,WCNW1,,14128500,,112.6,225.0,170701051008,0,Wind,Wind at Carson,wind|9|009887|000225,WA
 184,28B080,,,Washougal,45.583586,-122.345695,,WASW,,,WASW1,,,,51.9,,170800010606,0,Washougal,Washougal at Washougal,washougal|9|009948|999999,WA
 185,CORVALLIS_merge,,,Corvallis,44.566361,-123.256806,,,,,CORO3,,14171600,,180.0,4420.0,170900030609,0,Willamette,Willamette at Corvallis,willamette|9|009820|004420,OR
