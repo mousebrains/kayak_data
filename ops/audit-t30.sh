@@ -213,7 +213,7 @@ runS "ls -la /etc/fail2ban/jail.local /etc/fail2ban/jail.d/ /etc/fail2ban/filter
 runS "ls -la /etc/ssh/sshd_config.d/"
 runS "ls -la /etc/systemd/system/kayak-* /etc/systemd/system/multi-user.target.wants/kayak-* 2>/dev/null"
 runS "ls -la /etc/sudoers.d/ 2>/dev/null"
-runS "getfacl /home/pat /home/pat/kayak /home/pat/public_html /home/pat/DB 2>/dev/null | sed 's/^getfacl: //' | head -80"
+runS "getfacl /home/pat /home/pat/kayak /var/cache/kayak/docroot /home/pat/DB 2>/dev/null | sed 's/^getfacl: //' | head -80"
 
 
 banner "11. Drift detection: repo vs /etc (each pair: identical / unified diff)"
@@ -301,7 +301,7 @@ run "test -f /home/pat/logs/csp.log && (echo 'size:'; wc -c /home/pat/logs/csp.l
 
 
 banner "15. Disk + DB footprint"
-run "du -sh /home/pat/DB /home/pat/public_html /home/pat/backups /home/pat/logs 2>/dev/null"
+run "du -sh /home/pat/DB /var/cache/kayak/docroot /home/pat/backups /home/pat/logs 2>/dev/null"
 run "du -sh /home/pat/kayak /home/pat/.venv 2>/dev/null"
 runS "du -sh /var/log /var/cache /var/lib /var/tmp /tmp 2>/dev/null"
 runS "du -sh /var/log/* 2>/dev/null | sort -hr | head -20"
@@ -353,12 +353,12 @@ run "grep -n 'site_url' $REPO/deploy/nginx-editor-env.conf"
 section "Repo: tests that pin the cutover-day attribution string"
 run "grep -nH 'levels\\.\\(mousebrains\\|wkcc\\)' $REPO/tests/test_build_geojson_split.py"
 section "Live attribution string in the most recent build output"
-run "grep -o '\"attribution\":\"[^\"]*\"' /home/pat/public_html/static/reaches.geojson 2>/dev/null | head -1"
-run "grep -o '\"attribution\":\"[^\"]*\"' /home/pat/public_html/static/sparklines.json 2>/dev/null | head -1"
+run "grep -o '\"attribution\": *\"[^\"]*\"' /var/cache/kayak/docroot/static/reaches-geom.json 2>/dev/null | head -1"
+run "grep -o '\"attribution\": *\"[^\"]*\"' /var/cache/kayak/docroot/static/sparklines.json 2>/dev/null | head -1"
 section "Live site_url (from /etc/nginx/conf.d/editor-env.conf)"
 runS "grep site_url /etc/nginx/conf.d/editor-env.conf"
 section "Build mtime (drives the post-cutover GeoJSON refresh check)"
-run "stat -c '%y  %n' /home/pat/public_html/index.html /home/pat/public_html/static/reaches.geojson /home/pat/public_html/static/sparklines.json 2>/dev/null"
+run "stat -c '%y  %n' /var/cache/kayak/docroot/index.html /var/cache/kayak/docroot/static/reaches-geom.json /var/cache/kayak/docroot/static/reaches-state.json 2>/dev/null"
 
 
 banner "20. Apt sources + extra repos"
