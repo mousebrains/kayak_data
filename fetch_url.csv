@@ -114,3 +114,4 @@ id,url,parser,hours,is_active
 130,https://www.nwd-wc.usace.army.mil/dd/common/web_service/webexec/getjson?query=%5B%22BON.Flow-Out.Ave.1Hour.1Hour.CBT-REV%22%5D&timezone=GMT&backward=2d&forward=0d,usace.cda,,1
 131,https://api.water.noaa.gov/nwps/v1/gauges/VAPW1/stageflow/observed,nwps,,1
 132,https://api.water.noaa.gov/nwps/v1/gauges/SHNO3/stageflow/observed,nwps,,1
+133,https://www.nwrfc.noaa.gov/xml/xml.cgi?id=LNEO3&pe=HG&dtype=b&numdays=1,nwrfc.xml,,1
