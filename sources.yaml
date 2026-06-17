@@ -462,6 +462,10 @@ fetch_urls:
   url: https://api.water.noaa.gov/nwps/v1/gauges/SHNO3/stageflow/observed
   parser: nwps
   enabled: true
+- id: 133
+  url: https://www.nwrfc.noaa.gov/xml/xml.cgi?id=LNEO3&pe=HG&dtype=b&numdays=1
+  parser: nwrfc.xml
+  enabled: true
 sources:
 - id: 1
   name: BCLO3
@@ -1943,3 +1947,21 @@ sources:
   agency: Calculation
   gauge_id: 234
   calc_expression_id: 25
+- id: 359
+  name: LNEO3
+  agency: NWRFC
+  gauge_id: 235
+  fetch_url_id: 133
+- id: 360
+  name: '14181900'
+  agency: USGS
+  gauge_id: 235
+- id: 361
+  name: '14317600'
+  agency: USGS
+  gauge_id: 236
+- id: 362
+  name: LittleNSantiam_14181900_rating_calc
+  agency: Calculation
+  gauge_id: 235
+  calc_expression_id: 26

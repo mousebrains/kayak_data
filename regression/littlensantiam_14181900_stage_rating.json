@@ -1,0 +1,34 @@
+{
+  "slug": "littlensantiam_14181900_stage_rating",
+  "type": "stage_discharge_rating",
+  "target": "14181900",
+  "form": "Q = C*(h-h0)^b",
+  "coefs": [
+    {
+      "name": "C",
+      "value": 21.55
+    },
+    {
+      "name": "h0",
+      "value": 2.35
+    },
+    {
+      "name": "b",
+      "value": 2.637
+    }
+  ],
+  "n": 10,
+  "window": [
+    "2021-08-25",
+    "2026-02-04"
+  ],
+  "r2_loglog": 0.999,
+  "rel_rmse_pct": 7.1,
+  "validation": {
+    "basis": "USGS field gaugings (direct discharge measurements)",
+    "modern_gaugings_n": 10,
+    "cross_era_highflow": "modern fit predicts 2007 (3630) and 1973 (2680) high-flow gaugings within ~1%",
+    "datum_shift": "modern reads ~+20% flow-at-stage vs pre-2009 at low/mid flow, ~0 at high flow -> gradual channel drift, no datum jump"
+  },
+  "note": "Site reports gage height only (USGS 00060 = 2 values ever, 1972-73; NWRFC LNEO3 = stage only). Rating from 44 paired stage+Q field gaugings 1972-2026, fit on the 10 current-gage (2020+) gaugings. See littlensantiam_14181900_stage_rating.md"
+}
