@@ -53,9 +53,6 @@ jobs:
       - name: generate-sources --check (registry vs committed CSVs)
         run: engine/.venv/bin/levels generate-sources "$GITHUB_WORKSPACE" --check
 
-      # --no-seed is a deprecated no-op on current engine main (S1-cleanup made
-      # init-db schema-only) but keeps this step working against any main from
-      # before that change; drop the flag when the engine removes it (Batch 6).
       - name: sync + build smoke (clean apply, idempotent no-op, build)
         env:
           DATABASE_URL: sqlite:///${{ runner.temp }}/k.db
@@ -64,7 +61,7 @@ jobs:
           SITE_URL: https://levels.wkcc.org
         run: |
           L=engine/.venv/bin/levels
-          "$L" init-db --no-seed
+          "$L" init-db
           "$L" sync-metadata
           "$L" sync-metadata
           "$L" build

@@ -38,7 +38,7 @@ there is no reverse sync from the live DB back to the dataset.
 ## How it's consumed
 
 The code reads this directory via the `DATASET_DIR` env var (the local clone
-path; the former `METADATA_DIR` is a deprecated alias). `scripts/deploy.sh` pulls
+path). `scripts/deploy.sh` pulls
 this repo, then `levels sync-metadata` applies the CSV diff and
 `import_metadata.py --geom-only/--gradient-only` applies the JSONs.
 
