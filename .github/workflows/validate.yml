@@ -182,4 +182,8 @@ jobs:
           "$L" init-db
           "$L" sync-metadata
           "$L" sync-metadata
+          # Apply the geom/gradient sidecars (reaches.json / reaches-gradient.json)
+          # the same way kayak-deploy does, so the smoke builds the real DB state
+          # and can catch a sidecar-apply regression — not just the CSV projection.
+          "$L" import-metadata
           "$L" build
