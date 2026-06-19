@@ -54,12 +54,12 @@ jobs:
         run: |
           BASE_SHA="${{ github.event.pull_request.base.sha || github.sha }}"
           REF=$(git show "$BASE_SHA:dataset.yaml" \
-            | sed -nE 's/^engine_test_ref:[[:space:]]*"?([0-9a-f]{40})"?.*/\1/p')
+            | sed -nE 's/^engine_test_ref:[^0-9a-f]*([0-9a-f]{40}).*/\1/p')
           if [ -z "$REF" ]; then
             echo "::error::could not read a 40-hex engine_test_ref from $BASE_SHA:dataset.yaml"
             exit 1
           fi
-          CANDIDATE=$(sed -nE 's/^engine_test_ref:[[:space:]]*"?([0-9a-f]{40})"?.*/\1/p' dataset.yaml)
+          CANDIDATE=$(sed -nE 's/^engine_test_ref:[^0-9a-f]*([0-9a-f]{40}).*/\1/p' dataset.yaml)
           if [ -z "$CANDIDATE" ]; then
             echo "::error::could not read a 40-hex engine_test_ref from the PR dataset.yaml"
             exit 1
@@ -182,4 +182,5 @@ jobs:
           "$L" init-db
           "$L" sync-metadata
           "$L" sync-metadata
+          "$L" import-metadata
           "$L" build
