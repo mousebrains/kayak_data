@@ -182,5 +182,4 @@ jobs:
           "$L" init-db
           "$L" sync-metadata
           "$L" sync-metadata
-          "$L" import-metadata
           "$L" build
