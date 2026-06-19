@@ -179,7 +179,7 @@ jobs:
           SITE_URL: https://levels.wkcc.org
         run: |
           L=engine/.venv/bin/levels
-          "$L" init-db --no-seed
+          "$L" init-db
           "$L" sync-metadata
           "$L" sync-metadata
           "$L" build
