@@ -115,3 +115,4 @@ id,url,parser,hours,is_active
 131,https://api.water.noaa.gov/nwps/v1/gauges/VAPW1/stageflow/observed,nwps,,1
 132,https://api.water.noaa.gov/nwps/v1/gauges/SHNO3/stageflow/observed,nwps,,1
 133,https://www.nwrfc.noaa.gov/xml/xml.cgi?id=LNEO3&pe=HG&dtype=b&numdays=1,nwrfc.xml,,1
+134,https://www.licor.cloud/api/v2/timeseriesdata?dashboardUUID=4c98589d-ef81-4d4f-9573-bc6062d4aae0&flow=da47cdb7-c1d5-42b5-922d-b8c75f0e07b6&gauge=ed1d69c0-88a0-4e7b-9ffe-d66ebc004468&temperature=46d6fb02-c314-411e-b5d5-1986d107de3f&last=2&unit=days&interval=15&intervalUnit=minutes,licor,,1
