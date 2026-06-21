@@ -324,7 +324,6 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 351,14242580,USGS,,,
 352,14240525,USGS,,,
 353,SF_Toutle_calc,Calculation,,20,
-354,Kalama_ItalianCreek_calc,Calculation,,21,
 355,Coweeman_Kelso_calc,Calculation,,22,
 356,Green_Toutle_calc,Calculation,,23,
 357,FishCreek_14209700_rating_calc,Calculation,,24,
@@ -333,3 +332,4 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 360,14181900,USGS,,,
 361,14317600,USGS,,,
 362,LittleNSantiam_14181900_rating_calc,Calculation,,26,
+363,Kalama_ItalianCreek_LICOR,LI-COR,134,,

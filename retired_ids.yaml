@@ -2,4 +2,7 @@
 # reused and the id counter stays above them. See kayak.dataset.contract in the
 # kayak engine. Empty mapping = nothing retired (historical purges are already
 # guarded by the existing high id counters; future purges record here).
-{}
+source:
+  - 354  # Kalama_ItalianCreek_calc — replaced by the LI-COR source (363)
+calc_expression:
+  - 21  # Kalama Italian Cr quadratic estimate — retired with source 354
