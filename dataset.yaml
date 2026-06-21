@@ -5,8 +5,8 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to the engine's dataset-separation
-# Batch 6 merge (kayak_python #207): R9 deprecation removals (METADATA_DIR alias,
-# init-db --no-seed, HC_METADATA_SNAPSHOT allowlist) — the cleanup that completes
-# the code/data separation. (Catches the pin up across batches 3-6.)
-engine_test_ref: "ba12fa6ed6123da89f70bc371f32ed42e3b21c40"
+# S7 formalizes per-release pinning. Bumped to kayak_python main @22bfac3
+# (#210 + #211): the LI-COR public-dashboard parser + `fetch-licor` POST step
+# (the `licor` parser) — required so a follow-up PR can reference
+# `parser: licor` and validate against an engine that recognizes it.
+engine_test_ref: "22bfac37b5d0fef4f79bea1cead308d0db829994"
