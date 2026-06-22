@@ -95,10 +95,6 @@ each report for the full fit, diagnostics, and the deployed `calc_expression`.
   — SF Toutle at Toutle (retired USGS 14241500) ← Toutle at Tower Rd 14242580
   (downstream mass-balance) + EF Lewis 14222500. Lead/lag:
   [`sftoutle_14241500_leadlag.md`](sftoutle_14241500_leadlag.md).
-- [`kalama_14223500_from_eflewis_tilton.md`](kalama_14223500_from_eflewis_tilton.md)
-  — Kalama bl Italian Cr (retired USGS 14223500, 1982) ← EF Lewis 14222500
-  (quadratic) + Tilton 14236200. **Deployed with a `least(EF, 15600)` input cap** (the
-  fitted parabola's vertex sits just inside the observed range).
 - [`coweeman_14245000_from_eflewis.md`](coweeman_14245000_from_eflewis.md)
   — Coweeman nr Kelso (retired USGS 14245000, 1984) ← EF Lewis 14222500 (quadratic).
   **Out-of-era validated** against the independent WA Ecology 26C075 telemetry record
