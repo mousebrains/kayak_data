@@ -247,7 +247,7 @@ id,reach_id,name,low,low_data_type,high,high_data_type
 246,45,III(IV-),400.0,flow,3000.0,flow
 247,45,IV(V),3000.0,flow,4000.0,flow
 248,307,II-III,400.0,flow,1500.0,flow
-249,308,II,300.0,flow,1000.0,flow
+249,308,II,2000.0,flow,20000.0,flow
 250,95,II-IV,800.0,flow,2000.0,flow
 251,309,III(IV),600.0,flow,1000.0,flow
 252,310,II,400.0,flow,2500.0,flow
@@ -432,7 +432,7 @@ id,reach_id,name,low,low_data_type,high,high_data_type
 431,421,II,600.0,flow,3500.0,flow
 432,422,III-IV,600.0,flow,1300.0,flow
 433,423,II-IV,1000.0,flow,3000.0,flow
-434,424,III-IV,800.0,flow,3000.0,flow
+434,424,III-IV,300.0,flow,3000.0,flow
 435,425,II-III(IV),600.0,flow,800.0,flow
 436,426,III+(IV),1500.0,flow,4000.0,flow
 437,427,II+,900.0,flow,2300.0,flow
