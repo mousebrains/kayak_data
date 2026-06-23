@@ -332,4 +332,4 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 360,14181900,USGS,,,
 361,14317600,USGS,,,
 362,LittleNSantiam_14181900_rating_calc,Calculation,,26,
-363,Kalama_ItalianCreek_LICOR,LI-COR,134,,
+363,Kalama_ItalianCreek_LICOR,"Cowlitz County Fire District 5, Kalama",134,,
