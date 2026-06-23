@@ -1966,6 +1966,6 @@ sources:
   calc_expression_id: 26
 - id: 363
   name: Kalama_ItalianCreek_LICOR
-  agency: LI-COR
+  agency: "Cowlitz County Fire District 5, Kalama"
   gauge_id: 231
   fetch_url_id: 134
