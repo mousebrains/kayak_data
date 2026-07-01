@@ -26,10 +26,10 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: Checkout dataset (main)
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
 
       - name: Checkout engine at main (read-only deploy key)
-        uses: actions/checkout@v6
+        uses: actions/checkout@v7
         with:
           repository: mousebrains/kayak_python
           ref: main
