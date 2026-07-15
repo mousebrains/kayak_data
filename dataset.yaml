@@ -5,8 +5,10 @@ name: WKCC River Levels
 status: publishable
 license: CC-BY-NC-4.0
 # Full 40-hex commit of the approved engine this dataset is validated against.
-# S7 formalizes per-release pinning. Bumped to kayak_python main @22bfac3
-# (#210 + #211): the LI-COR public-dashboard parser + `fetch-licor` POST step
-# (the `licor` parser) — required so a follow-up PR can reference
-# `parser: licor` and validate against an engine that recognizes it.
-engine_test_ref: "22bfac37b5d0fef4f79bea1cead308d0db829994"
+# S7 formalizes per-release pinning. Bumped to kayak_python main @8efc37e
+# (#227): the nwrfc.textplot parser learns pe=TW (Temperature), and refuses a
+# page whose header names a column it cannot map rather than relabelling it as
+# flow. Nothing in this dataset needs that at validation time — `validate` does
+# not fetch or run parsers — so this is a hygiene bump: it keeps the pinned
+# validator at the engine that actually runs this data in production.
+engine_test_ref: "8efc37e7b1101b51d9dc54ba93a266b89f321aa4"
