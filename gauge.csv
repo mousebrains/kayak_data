@@ -94,11 +94,11 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 93,14154500,,,"Pitcher Creek, near Dorena",43.735278,-122.874444,14154500,DRRO,,,,,14154500,,856.16,211.0,170900020204,0,Row,"Row at Pitcher Creek, near Dorena",row|9|009144|000211,OR
 94,SALMON_WILLAMETTE_calc,,,Near Oakridge (estimated),43.762346,-122.372823,,,,,,,,,1462.36,117.0,170900010403,0,Salmon Creek,Salmon Cr near Oakridge (calc),salmon creek|9|008538|000117,OR
 95,Salmon_Whitebird_merge,,,White Bird,45.750278,-116.323889,13317000,WHBI,,,WHBI1,,13317000,,1416.01,13421.0,170602090504,0,Salmon,Salmon at White Bird,salmon|9|008584|013421,ID
-96,SF_Salmon_Krassel_merge,,,Krassel Ranger Station,44.986944,-115.725,13310700,KRSI,,,KRSI1,,13310700,,3750.0,330.0,170602080412,0,South Fork Salmon,South Fork Salmon at Krassel Ranger Station,salmon|0south|006250|000330,ID
-97,MF_Salmon_merge,,,Middle Fork Lodge,44.721519,-115.014347,13309220,MIDI,,105897,MIDI1,,13309220,,4384.4,1042.0,170602050903,0,Middle Fork Salmon,Middle Fork Salmon at Middle Fork Lodge,salmon|0middle|005616|001042,ID
-98,Little_Salmon_Riggins_merge,,,Riggins,45.413056,-116.325278,13316500,RIGI,,107706,RIGI1,,13316500,,1755.28,576.0,170602100505,0,Little Salmon,Little Salmon at Riggins,little salmon|9|008245|000576,ID
+96,SF_Salmon_Krassel_merge,,,Krassel Ranger Station,44.986944,-115.725,13310700,KRSI,,,KRSI1,,13310700,,3750.0,330.0,170602080412,0,South Fork Salmon,South Fork Salmon at Krassel Ranger Station,salmon|0d-south|006250|000330,ID
+97,MF_Salmon_merge,,,Middle Fork Lodge,44.721519,-115.014347,13309220,MIDI,,105897,MIDI1,,13309220,,4384.4,1042.0,170602050903,0,Middle Fork Salmon,Middle Fork Salmon at Middle Fork Lodge,salmon|0b-middle|005616|001042,ID
+98,Little_Salmon_Riggins_merge,,,Riggins,45.413056,-116.325278,13316500,RIGI,,107706,RIGI1,,13316500,,1755.28,576.0,170602100505,0,Little Salmon,Little Salmon at Riggins,salmon|0e-little|008245|000576,ID
 99,13296500,,,Yankee Fork,44.268333,-114.732778,13296500,SRYI,,,SRYI1,,13296500,,5900.0,807.0,170602010603,0,Salmon,Salmon at Yankee Fork,salmon|9|004100|000807,ID
-100,14141500,,,Bull Run,45.415398,-122.171475,14141500,LSBO,,,,,14141500,,720.0,23.1,170800010505,0,Little Sandy,Little Sandy at Bull Run,little sandy|9|009280|000023,OR
+100,14141500,,,Bull Run,45.415398,-122.171475,14141500,LSBO,,,,,14141500,,720.0,23.1,170800010505,0,Little Sandy,Little Sandy at Bull Run,sandy|0little|009280|000023,OR
 101,Sandy_Bull_Run_merge,,,Bull Run,45.449009,-122.245089,14142500,SNDO,,,SNDO3,,14142500,34,240.0,436.0,170800010702,0,Sandy,Sandy at Bull Run,sandy|9|009760|000436,OR
 102,S_Santiam_Cascadia_merge,,,Cascadia,44.391792,-122.497582,14185000,SSCO,,,SSCO3,,14185000,35,775.0,174.0,170900060401,0,South Santiam,South Santiam at Cascadia,santiam|0south|009225|000174,OR
 103,14178000,,,Boulder Creek,44.706789,-122.101186,14178000,BCKO,,,BCKO3,,14178000,36,1590.0,216.0,170900050208,0,North Santiam,North Santiam at Boulder Creek,santiam|0north|008410|000216,OR
@@ -108,7 +108,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 107,Green_Peter_merge,,,Green Peter Dam,44.448234,-122.550053,,,,,,,,,704.8,,170900060402,0,Middle Santiam,Middle Santiam at Green Peter Dam,santiam|0middle|009295|999999,OR
 108,Santiam_Jefferson_merge,,,Jefferson,44.714722,-123.01425,14189000,UJFFO,,,JFFO3,,14189000,39,199.63,1790.0,170900050604,0,Santiam,Santiam at Jefferson,santiam|9|009800|001790,OR
 109,14183000,,,Mehama,44.78925,-122.618806,14183000,UMEHO,,,MEHO3,,14183000,40,605.78,654.35,170900050601,0,North Santiam,North Santiam at Mehama,santiam|0north|009394|000654,OR
-110,14182500,,,Mehama,44.791511,-122.578974,14182500,LSMO,,,LSMO3,,14182500,41,655.0,112.0,170900050505,0,Little North Santiam,Little North Santiam at Mehama,little north santiam|9|009345|000112,OR
+110,14182500,,,Mehama,44.791511,-122.578974,14182500,LSMO,,,LSMO3,,14182500,41,655.0,112.0,170900050505,0,Little North Santiam,Little North Santiam at Mehama,santiam|0little|009345|000112,OR
 111,Selway_Lowell_merge,,,Lowell,46.086667,-115.513889,13336500,SELI,,,SELI1,,13336500,,1533.45,1915.0,170603020403,0,Selway,Selway at Lowell,selway|9|008467|001915,ID
 112,SF_ALSEA_calc,,,Near Alsea (estimated),44.365121,-123.599827,,,,,,,,,300.0,49.5,171002050104,0,South Fork Alsea,SF Alsea near Alsea (calc),alsea|0south|009710|999999,OR
 113,Clearwater_Stites_merge,,,Stites,46.086389,-115.976667,13338500,STII,,,STII1,,13338500,,1327.12,1168.0,170603050903,0,South Fork Clearwater,South Fork Clearwater at Stites,clearwater|0south|008673|001168,ID
@@ -154,7 +154,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 153,"JARBIDGE RV BLW JARBIDGE, NV",,,Jarbidge,41.890461,-115.428682,,,,,,,13162225,,6050.0,30.6,170501020301,0,Jarbidge,Jarbidge at Jarbidge,jarbidge|9|003950|000031,NV
 154,"EF OWYHEE RIVER AT CRUTCHER CROSSING, ID",,,Crutcher Crossing,42.261369,-116.868442,,,,,,,13176400,,4253.65,2140.0,170501041705,0,East Fork Owyhee,East Fork Owyhee at Crutcher Crossing,owyhee|0east|005746|002140,ID
 155,NF PAYETTE RIVER NR BANKS ID,,,Banks,44.114167,-116.107222,,,,,,,13246000,,3084.61,921.0,170501230605,0,North Fork Payette,North Fork Payette at Banks,payette|0north|006915|000921,ID
-156,YANKEE FORK SALMON RIVER NR CLAYTON ID,,,Clayton,44.278889,-114.733889,,YFSI,,,YFSI1,,13296000,,5950.0,189.0,170602010505,0,Yankee Fork Salmon,Yankee Fork Salmon at Clayton,yankee fork salmon|9|004050|000189,ID
+156,YANKEE FORK SALMON RIVER NR CLAYTON ID,,,Clayton,44.278889,-114.733889,,YFSI,,,YFSI1,,13296000,,5950.0,189.0,170602010505,0,Yankee Fork Salmon,Yankee Fork Salmon at Clayton,salmon|0a-yankee|004050|000189,ID
 157,"SANDY RIVER NEAR MARMOT, OR",,,Marmot,45.399564,-122.137307,,,,,,,14137000,,730.0,264.0,170800010402,0,Sandy,Sandy at Marmot,sandy|9|009270|000264,OR
 158,"MIDDLE SANTIAM R NEAR CASCADIA, OR",,,Cascadia,44.515124,-122.372025,,,,,,,14185800,,1040.0,104.0,170900060306,0,Middle Santiam,Middle Santiam at Cascadia,santiam|0middle|008960|000104,OR
 159,"OAK GROVE FORK AT RIPPLEBROOK CAMPGROUND, OR",,,Ripplebrook Campground,45.079814,-122.042858,,,,,,,14209250,,1420.0,141.0,170900110306,0,Oak Grove Fork,Oak Grove Fork at Ripplebrook Campground,oak grove fork|9|008580|000141,OR
@@ -178,7 +178,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 177,McKenzie_Rainbow,,,nr Rainbow,44.1664,-122.2558,CMRO3,CMRO3,,,CMRO3,,,,1160.0,,170900040502,0,McKenzie,McKenzie nr Rainbow,mckenzie|9|008840|999999,OR
 178,SALMON RIVER AB EAST FORK NR CLAYTON ID,,,East Fork nr Clayton,44.266642,-114.326758,,SAEI,,,SAEI1,,13297380,,5326.2,1200.0,170602010906,0,Salmon,Salmon at East Fork nr Clayton,salmon|9|004674|001200,ID
 179,SALMON RIVER NR SHOUP ID,,,Shoup,45.3225,-114.44,,,,,,,13307000,,3157.6,6239.0,170602031302,0,Salmon,Salmon at Shoup,salmon|9|006842|006239,ID
-180,EFSF_Stibnite,,,Stibnite,44.905722,-115.3295,,SFSI,,,SFSI1,,13311000,,6466.0,19.3,170602080201,0,East Fork South Fork Salmon,East Fork South Fork Salmon at Stibnite,salmon|0east|003534|000019,ID
+180,EFSF_Stibnite,,,Stibnite,44.905722,-115.3295,,SFSI,,,SFSI1,,13311000,,6466.0,19.3,170602080201,0,East Fork South Fork Salmon,East Fork South Fork Salmon at Stibnite,salmon|0c-east|003534|000019,ID
 181,EFSF_Salmon_calc,,,EFSF just below Johnson Cr confluence (calc),44.962554,-115.505507,,,,,,,,,4632.4,,170602080302,0,Salmon,Salmon at EFSF just below Johnson Cr confluence (calc),salmon|9|005368|999999,ID
 182,LWWW1,,,Willard Nat'l Fish Hatchery near Mill A,45.7648,-121.6303,,LWWW,,,LWWW1,,14124500,,925.0,,170701050905,0,Little White Salmon,Little White Salmon at Willard Nat'l Fish Hatchery near Mill A,little white salmon|9|009075|999999,WA
 183,14128500,,,Carson,45.726747,-121.794775,,WCNW,,,WCNW1,,14128500,,112.6,225.0,170701051008,0,Wind,Wind at Carson,wind|9|009887|000225,WA
@@ -221,7 +221,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 222,VAPW1,,,Vancouver,45.631,-122.696,,,,,VAPW1,,,,,,17080003,0,Columbia,Columbia at Vancouver,columbia|9|000894|000000,"OR,WA"
 223,SHNO3,,,St. Helens,45.864,-122.796,,,,,SHNO3,,,,,,17080003,0,Columbia,Columbia at St. Helens,columbia|9|000914|000000,"OR,WA"
 224,Smith_Gardiner_calc,,,Near Gardiner (estimated),43.784562,-123.815104,,,,,,,,,50.0,206.0,171003030704,0,Smith,Smith near Gardiner (calc),smith|9|009950|000206,OR
-225,SF_Salmon_MackayBar_calc,,,At mouth nr Mackay Bar (estimated),45.366575,-115.512901,,,,,,,,,1980.0,1309.0,170602080608,0,South Fork Salmon,SF Salmon at Mackay Bar (calc),salmon|0south|008020|001309,ID
+225,SF_Salmon_MackayBar_calc,,,At mouth nr Mackay Bar (estimated),45.366575,-115.512901,,,,,,,,,1980.0,1309.0,170602080608,0,South Fork Salmon,SF Salmon at Mackay Bar (calc),salmon|0d-south|008020|001309,ID
 226,Secesh_Burgdorf_calc,,,Near Burgdorf (estimated),45.225833,-115.813333,,,,,,,,,5690.0,104.0,170602080503,0,Secesh,Secesh nr Burgdorf (calc),secesh|9|004310|000104,ID
 227,14236200,,,Above Bear Canyon Cr nr Cinebar,46.595384,-122.459556,,,,,TILW1,,14236200,,610.48,141.0,170800050106,0,Tilton,Tilton nr Cinebar,tilton|9|009390|000141,WA
 228,14242580,,,At Tower Rd nr Silver Lake,46.335,-122.840833,,,,,TOTW1,,14242580,,120.0,496.0,170800050702,0,Toutle,Toutle at Tower Rd,toutle|9|009880|000496,WA
@@ -231,5 +231,6 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 232,Coweeman_Kelso_calc,,,Near Kelso (estimated),46.128169,-122.838443,,,,,,,,,30.0,119.0,170800050804,0,Coweeman,Coweeman nr Kelso (calc),coweeman|9|009970|000119,WA
 233,Green_Toutle_calc,,,Above Beaver Cr nr Kid Valley (estimated),46.381775,-122.52372,,,,,,,,,845.8,129.0,170800050404,0,Green (Toutle),Green (Toutle) above Beaver Cr (calc),green (toutle)|9|009154|000129,WA
 234,Roaring_FishCreek_calc,,,Three Lynx,45.159565,-122.115081,,,,,,,14209600,,1040.0,42.4,170900110402,0,Roaring,Roaring River,roaring|9|008590|000042,OR
-235,14181900,,,Elkhorn,44.835803,-122.35495,14181900,,,,LNEO3,,14181900,,1157.87,53.1,170900050503,0,Little North Santiam,Little North Santiam at Elkhorn,little north santiam|9|008842|000053,OR
+235,14181900,,,Elkhorn,44.835803,-122.35495,14181900,,,,LNEO3,,14181900,,1157.87,53.1,170900050503,0,Little North Santiam,Little North Santiam at Elkhorn,santiam|0little|008842|000053,OR
 236,14317600,,,Glide,43.346664,-122.992592,14317600,,,,,,14317600,,940.0,97.4,171003010903,0,Rock Creek,Rock Creek near Glide,rock creek|9|009060|000097,OR
+237,LAPO3,,,La Pine,43.689167,-121.501667,,,,,LAPO3,,,,,,170703020704,0,Little Deschutes,Little Deschutes at La Pine,deschutes|0little|999999|999999,OR
