@@ -477,7 +477,7 @@ fetch_urls:
 - id: 136
   url: https://www.nwrfc.noaa.gov/station/flowplot/textPlot.cgi?id=LAPO3&pe=TW
   parser: nwrfc.textplot
-  enabled: false
+  enabled: true
 sources:
 - id: 1
   name: BCLO3
