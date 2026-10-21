@@ -35,6 +35,10 @@ each report for the full fit, diagnostics, and the deployed `calc_expression`.
 - [`salmon_14146500_from_nfmf.md`](salmon_14146500_from_nfmf.md)
   — Salmon Cr nr Oakridge (retired USGS 14146500) ← NFMF Willamette 14147500
   (linear, r²=0.952). Lead/lag: [`salmon_14146500_leadlag.md`](salmon_14146500_leadlag.md).
+- [`rickreall_14190700_from_syamhill.md`](rickreall_14190700_from_syamhill.md)
+  — Rickreall Cr nr Dallas (retired USGS 14190700) ← S Yamhill nr Willamina 14192500
+  (linear, r²=0.936; live predictor is NWS-rated WLAO3 flow). Luckiamute nr Suver
+  (AW's reference gauge) rejected: r²=0.771 and lags Rickreall ~1 day.
 
 ### Clackamas basin (Oregon)
 

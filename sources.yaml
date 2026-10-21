@@ -1987,3 +1987,8 @@ sources:
   agency: NWRFC
   gauge_id: 237
   fetch_url_id: 136
+- id: 366
+  name: Rickreall_SYamhill_calc
+  agency: Calculation
+  gauge_id: 238
+  calc_expression_id: 27
