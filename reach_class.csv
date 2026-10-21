@@ -213,7 +213,7 @@ id,reach_id,name,low,low_data_type,high,high_data_type
 212,280,IV(V),4000.0,flow,10000.0,flow
 213,281,III-IV,400.0,flow,7000.0,flow
 214,282,IV(V),2000.0,flow,7000.0,flow
-215,283,II-III,13.0,flow,23.0,flow
+215,283,II-III,250.0,flow,750.0,flow
 216,284,III-IV,1000.0,flow,2000.0,flow
 217,285,II-III(IV),1400.0,flow,3300.0,flow
 218,286,IV-V,1000.0,flow,6000.0,flow

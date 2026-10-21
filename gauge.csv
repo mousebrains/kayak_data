@@ -234,3 +234,4 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 235,14181900,,,Elkhorn,44.835803,-122.35495,14181900,,,,LNEO3,,14181900,,1157.87,53.1,170900050503,0,Little North Santiam,Little North Santiam at Elkhorn,santiam|0little|008842|000053,OR
 236,14317600,,,Glide,43.346664,-122.992592,14317600,,,,,,14317600,,940.0,97.4,171003010903,0,Rock Creek,Rock Creek near Glide,rock creek|9|009060|000097,OR
 237,LAPO3,,,La Pine,43.689167,-121.501667,,,,,LAPO3,,,,,,170703020704,0,Little Deschutes,Little Deschutes at La Pine,deschutes|0little|999999|999999,OR
+238,Rickreall_SYamhill_calc,,,Near Dallas (estimated),44.915117,-123.385104,,,,,,,14190700,,460.0,27.4,170900070103,0,Rickreall,Rickreall nr Dallas (calc),rickreall|9|009540|000027,OR
