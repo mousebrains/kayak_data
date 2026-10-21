@@ -173,7 +173,7 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 172,Hood_EFMF_calc,,,EF+MF Hood (Tucker minus WF),45.603995,-121.632371,,,,,,,,,783.4,,170701050506,0,East Fork Hood,East Fork Hood at EF+MF Hood (Tucker minus WF),hood|0east|009217|999999,OR
 173,14302480,,,"Cedar Creek, near Tillamook",45.446218,-123.710397,14302480,,,,,,14302480,,70.0,156.0,171002030405,0,Trask,"Trask at Cedar Creek, near Tillamook",trask|9|009930|000156,OR
 174,Fall_Creek_Inflow,,,Fall Creek above Winberry (FALO3 inflow - 14150800 Winberry),43.972015,-122.65907,,,,,,,,,837.6,,170900010904,0,Fall Creek,Fall Creek at Fall Creek above Winberry (FALO3 inflow - 14150800 Winberry),fall creek|9|009162|999999,OR
-175,WLAO3,,,Willamina,45.047222,-123.502778,WLAO3,,,WLAO3,WLAO3,,,,242.1,,170900080404,0,South Yamhill,South Yamhill at Willamina,yamhill|0south|009758|999999,OR
+175,WLAO3,,,Willamina,45.047222,-123.502778,WLAO3,,,WLAO3,WLAO3,,,,242.1,,170900080205,0,South Yamhill,South Yamhill at Willamina,yamhill|0south|009758|999999,OR
 176,SF_McKenzie_near_Rainbow,,,Rainbow,44.136,-122.2484,14159500,,,,,,14159500,,1236.0,208.0,170900040308,0,South Fork Mckenzie,South Fork Mckenzie at Rainbow,mckenzie|0south|008764|000208,OR
 177,McKenzie_Rainbow,,,nr Rainbow,44.1664,-122.2558,CMRO3,CMRO3,,,CMRO3,,,,1160.0,,170900040502,0,McKenzie,McKenzie nr Rainbow,mckenzie|9|008840|999999,OR
 178,SALMON RIVER AB EAST FORK NR CLAYTON ID,,,East Fork nr Clayton,44.266642,-114.326758,,SAEI,,,SAEI1,,13297380,,5326.2,1200.0,170602010906,0,Salmon,Salmon at East Fork nr Clayton,salmon|9|004674|001200,ID
@@ -209,17 +209,17 @@ id,name,bank_full,flood_stage,location,latitude,longitude,station_id,cbtt_id,geo
 209,06085800,,,at Simms,47.501628,-111.931914,06085800,,,,,,06085800,,3551.08,1296.0,100301040708,0,Sun,Sun at Simms,sun|9|006449|001296,MT
 210,McKenzie_McKenzie_Bridge_calc,,,Near McKenzie Bridge (estimated),44.179012,-122.130335,,,,,,,,,1419.04,348.0,170900040209,0,McKenzie,McKenzie at McKenzie Bridge (calc),mckenzie|9|008581|000348,OR
 211,Horse_Creek_calc,,,Near McKenzie Bridge (estimated),44.162694,-122.154,,,,,,,,,,149.6,170900040105,0,Horse Creek,Horse Creek near McKenzie Bridge (calc),horse creek|9|999999|000150,OR
-213,454249120423500,,,Below John Day Dam,45.713458,-120.710893,,,,,,,454249120423500,,,,17070105,0,Columbia,Columbia below John Day Dam,columbia|9|000785|000000,"OR,WA"
-214,14105700,,,The Dalles,45.608278,-121.189917,,,,,,,14105700,,,,17070105,0,Columbia,Columbia at The Dalles,columbia|9|000808|000000,"OR,WA"
-215,Bonneville_merge,,,Below Bonneville Dam,45.633056,-121.960833,,,,,,,14128870,,,,17080001,0,Columbia,Columbia below Bonneville Dam,columbia|9|000855|000000,"OR,WA"
-216,14216000,,,above Muddy River,46.060355,-121.984509,,,,,,,14216000,,,,17080002,0,"Lewis, N. Fork",North Fork Lewis above Muddy River,lewis|0north|005000|000000,WA
-217,14219000,,,near Amboy,45.939834,-122.31704,,,,,,,14219000,,,,17080002,0,Canyon Creek (Lewis River trib.),Canyon Creek near Amboy,canyon creek (lewis river trib.)|9|999999|999999,WA
-218,CRPO3,,,abv Prineville Resv,44.179167,-120.587778,,,,,,,,,,,17070304,0,Crooked,Crooked abv Prineville Resv,crooked|9|005000|000000,OR
-219,PRVO3,,,blw Prineville Resv,44.113889,-120.794444,,,,,,,,,,,17070305,0,Crooked,Crooked blw Prineville Resv,crooked|9|006500|000000,OR
-220,CRSO3,,,Smith Rock,44.368057,-121.138816,,,,,,,,,,,17070305,0,Crooked,Crooked at Smith Rock,crooked|9|007500|000000,OR
-221,OCHO3,,,blw Ochoco Resv,44.396108,-120.431016,,,,,,,,,,,17070304,0,Ochoco Creek,Ochoco Creek blw Ochoco Resv,ochoco|9|005000|000000,OR
-222,VAPW1,,,Vancouver,45.631,-122.696,,,,,VAPW1,,,,,,17080003,0,Columbia,Columbia at Vancouver,columbia|9|000894|000000,"OR,WA"
-223,SHNO3,,,St. Helens,45.864,-122.796,,,,,SHNO3,,,,,,17080003,0,Columbia,Columbia at St. Helens,columbia|9|000914|000000,"OR,WA"
+213,454249120423500,,,Below John Day Dam,45.713458,-120.710893,,,,,,,454249120423500,,,,170701050103,0,Columbia,Columbia below John Day Dam,columbia|9|000785|000000,"OR,WA"
+214,14105700,,,The Dalles,45.608278,-121.189917,,,,,,,14105700,,,,170701050406,0,Columbia,Columbia at The Dalles,columbia|9|000808|000000,"OR,WA"
+215,Bonneville_merge,,,Below Bonneville Dam,45.633056,-121.960833,,,,,,,14128870,,,,170800010801,0,Columbia,Columbia below Bonneville Dam,columbia|9|000855|000000,"OR,WA"
+216,14216000,,,above Muddy River,46.060355,-121.984509,,,,,,,14216000,,,,170800020111,0,"Lewis, N. Fork",North Fork Lewis above Muddy River,lewis|0north|005000|000000,WA
+217,14219000,,,near Amboy,45.939834,-122.31704,,,,,,,14219000,,,,170800020603,0,Canyon Creek (Lewis River trib.),Canyon Creek near Amboy,canyon creek (lewis river trib.)|9|999999|999999,WA
+218,CRPO3,,,abv Prineville Resv,44.179167,-120.587778,,,,,,,,,,,170703040608,0,Crooked,Crooked abv Prineville Resv,crooked|9|005000|000000,OR
+219,PRVO3,,,blw Prineville Resv,44.113889,-120.794444,,,,,,,,,,,170703050102,0,Crooked,Crooked blw Prineville Resv,crooked|9|006500|000000,OR
+220,CRSO3,,,Smith Rock,44.368057,-121.138816,,,,,,,,,,,170703051101,0,Crooked,Crooked at Smith Rock,crooked|9|007500|000000,OR
+221,OCHO3,,,blw Ochoco Resv,44.396108,-120.431016,,,,,,,,,,,170703050205,0,Ochoco Creek,Ochoco Creek blw Ochoco Resv,ochoco|9|005000|000000,OR
+222,VAPW1,,,Vancouver,45.631,-122.696,,,,,VAPW1,,,,,,170800030200,0,Columbia,Columbia at Vancouver,columbia|9|000894|000000,"OR,WA"
+223,SHNO3,,,St. Helens,45.864,-122.796,,,,,SHNO3,,,,,,170800030900,0,Columbia,Columbia at St. Helens,columbia|9|000914|000000,"OR,WA"
 224,Smith_Gardiner_calc,,,Near Gardiner (estimated),43.784562,-123.815104,,,,,,,,,50.0,206.0,171003030704,0,Smith,Smith near Gardiner (calc),smith|9|009950|000206,OR
 225,SF_Salmon_MackayBar_calc,,,At mouth nr Mackay Bar (estimated),45.366575,-115.512901,,,,,,,,,1980.0,1309.0,170602080608,0,South Fork Salmon,SF Salmon at Mackay Bar (calc),salmon|003-south|008020|001309,ID
 226,Secesh_Burgdorf_calc,,,Near Burgdorf (estimated),45.225833,-115.813333,,,,,,,,,5690.0,104.0,170602080503,0,Secesh,Secesh nr Burgdorf (calc),secesh|9|004310|000104,ID
