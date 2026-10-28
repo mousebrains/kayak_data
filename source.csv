@@ -336,3 +336,6 @@ id,name,agency,fetch_url_id,calc_expression_id,timezone
 364,LAPO3,NWS,135,,
 365,LAPO3_TW,NWRFC,136,,
 366,Rickreall_SYamhill_calc,Calculation,,27,
+367,30C070_DSG_FM,WA DOE,137,,Etc/GMT+8
+368,30C070_STG_FM,WA DOE,138,,Etc/GMT+8
+369,30C070_WTM_FM,WA DOE,139,,Etc/GMT+8
