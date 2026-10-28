@@ -478,6 +478,18 @@ fetch_urls:
   url: https://www.nwrfc.noaa.gov/station/flowplot/textPlot.cgi?id=LAPO3&pe=TW
   parser: nwrfc.textplot
   enabled: true
+- id: 137
+  url: https://apps.ecology.wa.gov/ContinuousFlowAndWQ/StationData/Prod/30C070/30C070_DSG_FM.TXT
+  parser: wa.gov
+  enabled: true
+- id: 138
+  url: https://apps.ecology.wa.gov/ContinuousFlowAndWQ/StationData/Prod/30C070/30C070_STG_FM.TXT
+  parser: wa.gov
+  enabled: true
+- id: 139
+  url: https://apps.ecology.wa.gov/ContinuousFlowAndWQ/StationData/Prod/30C070/30C070_WTM_FM.TXT
+  parser: wa.gov
+  enabled: true
 sources:
 - id: 1
   name: BCLO3
@@ -1992,3 +2004,21 @@ sources:
   agency: Calculation
   gauge_id: 238
   calc_expression_id: 27
+- id: 367
+  name: 30C070_DSG_FM
+  agency: WA DOE
+  gauge_id: 239
+  timezone: Etc/GMT+8
+  fetch_url_id: 137
+- id: 368
+  name: 30C070_STG_FM
+  agency: WA DOE
+  gauge_id: 239
+  timezone: Etc/GMT+8
+  fetch_url_id: 138
+- id: 369
+  name: 30C070_WTM_FM
+  agency: WA DOE
+  gauge_id: 239
+  timezone: Etc/GMT+8
+  fetch_url_id: 139
